@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BasePizza index{% endblock %}
+
+{% block body %}
+    <h1>BasePizza index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>Name</th>
+                <th>Ingredient</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for base_pizza in base_pizzas %}
+            <tr>
+                <td>{{ base_pizza.name }}</td>
+                <td>{{ base_pizza.baseIngredient.name }}</td>
+                <td>
+                    <a href="{{ path('admin_base_pizza_show', {'id': base_pizza.id}) }}">show</a>
+                    <a href="{{ path('admin_base_pizza_edit', {'id': base_pizza.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_base_pizza_new') }}">Create new</a>
+{% endblock %}

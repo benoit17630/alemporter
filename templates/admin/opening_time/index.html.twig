@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OpeningTime index{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <h1 class="text-center">Liste des horaire disponible </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>nom</th>
+                <th>afficher ?</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for opening_time in opening_times %}
+            <tr>
+
+                <td>{{ opening_time.name }}</td>
+                <td>{{ opening_time.isActive ? 'Yes' : 'No' }}</td>
+                <td>
+                    <button class="btn btn-secondary">
+                    <a href="{{ path('admin_opening_time_edit', {'id': opening_time.id}) }}">Modifier</a>
+                    </button>
+                    <button class="btn btn-danger">
+                    <a href="{{ path('admin_opening_time_delete', {'id': opening_time.id}) }}">Suprimer</a>
+                    </button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_opening_time_new') }}">Create new</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAK;EAEG,WAAM,EAAE,4BAA4B;EACpC,UAAK,EAAE,KAAK;;AAIhB,QAAI;EACA,KAAK,ECVL,OAAO;EDWP,UAAU,EAAE,MAAM",
+"sources": ["styleconection.scss","var.scss"],
+"names": [],
+"file": "styleconection.css"
+}

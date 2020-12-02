@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block titre %}{% endblock %}
+
+{% block main %}
+    <div class="container-fluid ">
+        <div class="row  py-5 " id="accueil">
+
+            <div class="col-6 offset-3"><img src="{{ asset('assets/img/logo.jpg') }}" alt="" class="img-fluid"></div>
+        </div>
+        <div class="row justify-content-center fond1 py-5">
+            <p class="col-6 text-center">Nous vous proposons une <strong>gamme variée de pizzas</strong> à partir
+                <br />d'une <strong>pâte fraîche
+                    maison</strong> et de produits de première <strong>qualité.</strong><br />
+                <em>A découvrir aussi, nos salades de saison, desserts maison et boissons...</em></p>
+        </div>
+        <div class="intersection mb-5" id="basetomate"></div>
+        <section  class="container-fluid">
+
+            <h2>Nos Pizzas Base Tomate</h2>
+
+            <article class="row justify-content-around text-center">
+                <div class="col-lg-2 d-none d-lg-block"><img src="{{ asset('assets/img/pizza1.jpg') }}" alt="" class="img-fluid"></div>
+                <ul class=" col-8 row text-left">
+                    {% for tomate in tomates %}
+                        <li class="col-lg-6 col-12 mt-3">
+                            <ul class="row text-left">
+                                <li class="col-6">{{ tomate.name }} {{ tomate.comment }}</li>
+                                <li class="col-1 offset-3">{{ tomate.price }}€</li>
+                                <li class="col-12 arial"> tomate, fromage, olives</li>
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div class="col-lg-2 d-none d-lg-block"><img src="{{ asset('assets/img/pizza1.jpg') }}" alt="" class="img-fluid"></div>
+            </article>
+            <div class="intersection mb-5" id="basecreme"></div>
+        </section>
+        <section class="basecreme">
+            <h2 class="creme">Nos Pizzas Base Crème Fraiche</h2>
+
+            <article class="row justify-content-around text-center align-items-center ">
+                <div class="col-lg-2 d-none d-lg-flex"><img src="{{ asset('assets/img/pizza2.jpg') }}" alt="" class="img-fluid"></div>
+
+                <ul class=" col-8 row text-left ">
+                    {% for creme in cremes %}
+                        <li class="col-lg-6 col-12 mt-3">
+                            <ul class="row text-left">
+                                <li class="col-6">{{ creme.name }} {{ creme.comment }}</li>
+                                <li class="col-1 offset-3">{{ creme.price }}€</li>
+                                <li class="col-12 arial"> tomate, fromage, olives</li>
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div class="col-lg-2 d-none d-lg-flex"><img src="{{ asset('assets/img/pizza2.jpg') }}" alt="" class="img-fluid"></div>
+            </article>
+        </section>
+        <section id="special container-fluid">
+
+            <h2>Nos Pizzas Spéciales</h2>
+
+            <article class="row justify-content-around text-center align-items-center">
+                <ul class="col-8 row text-left">
+
+                        {% for special in specials %}
+                    <li class="col-lg-6 col-12 mt-3">
+                        <ul class="row text-left">
+                            <li class="col-6">{{ special.name }} {{ special.comment }}</li>
+                            <li class="col-1 offset-3">{{ special.price }}€</li>
+                            <li class="col-12 arial"> tomate, fromage, olives</li>
+                        </ul>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+
+            </article>
+
+            <div id="contacts"></div>
+        </section>
+        <section id="contact"  class="container-fluid ">
+
+            <h2>Horaires et Coordonnées</h2>
+
+            <article class="container ">
+                <ul class="row justify-content-center text-center align-items-center">
+                    <li class="col-lg-3 order-1">Adresse
+                        <ul class="row">
+                            <li class="col-12 arial">bis rue du 14 Juillet - Ste Marie de Ré</li>
+                            <li class="col-12">Téléphone</li>
+                            <li class="col-12 arial">05 46 45 31 60</li>
+                            <li class="col-12 arial">07 88 14 24 35</li>
+                        </ul>
+                    </li>
+                    <li class="col-lg-3 order-3">Ouvert toute l'année
+                        <ul>
+                            <li>{% for horaire in horaires %}
+                                    {% if horaire.isActive %}
+                                        {{ horaire.name|nl2br }}
+                                    {% endif %}
+
+                                {% endfor %}</li>
+                            <li>fermé le mardi</li>
+                            <li class="arial">(sauf pendant les vacances de pàques et d'été)</li>
+                        </ul>
+                    </li>
+                    <li class="col-lg-6 order-2"><img src="{{ asset('assets/img/vitrine2.jpg') }}" alt="" class="img-fluid"></li>
+                </ul>
+
+            </article>
+        </section>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2763.880885167215!2d-1.3161059999999998!3d46.153118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4803feef4298a7e3%3A0xabdaa64f77ef7e4e!2sA+L&#39;EMPORTER!5e0!3m2!1sfr!2sfr!4v1425252032617" style="border:0; width: 100%; height: 450px;"></iframe>
+    </div>
+
+
+
+
+{% endblock %}

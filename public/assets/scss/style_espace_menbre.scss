@@ -1,0 +1,31 @@
+    @import "var.scss";
+    //nav
+    nav {
+        position: sticky;
+        width: 12%;
+        top: 160;
+        padding: 0;
+        background-color: $blanc;
+        z-index: 1000;
+        border: solid 3px black;
+        border-radius: 20px;
+        ul {
+            li {
+                a {
+                    color: $maron;
+                    list-style: none;
+                    &:hover {
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    
+    // derniere commande
+    article {
+        border: solid 2px black;
+        background-color: darksalmon;
+        border-radius: 20px;
+    }

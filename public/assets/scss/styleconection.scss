@@ -1,0 +1,15 @@
+@import "var.scss";
+
+form {
+    font: {
+        family: Arial, Helvetica, sans-serif;
+        color: black;
+    }
+}
+body {
+    div {
+        color: $rouge;
+        text-align: center;
+       
+    }
+}

@@ -1,15 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="" />
+    <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="creation">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201202110125.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201202110618.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201202111140.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/font/StencilStd.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/4fromage.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/borsalino.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/burger.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/calzone.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/complete.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/flammenkueche.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/intersection.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/kebab.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/landaise.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/marguerite.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/nordique.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/pizza1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/pizza2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/point.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/point2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/reine.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/ruche.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/tartif.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/tonio.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/vegetariene.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/vitrine.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/vitrine2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/api.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/liste.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/style_espace_menbre.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/style_espace_menbre.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/style_espace_menbre.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/styleconection.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/styleconection.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/styleconection.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/var.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/var.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/var.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminHomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/BaseIngredientController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/BasePizzaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/OpeningTimeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/BaseIngredient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/BasePizza.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/OpeningTime.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/Admin/BaseIngredientType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/Admin/BasePizzaType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/Admin/OpeningTimeType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/BaseIngredientRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/BasePizzaRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/OpeningTimeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/admin_home/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_ingredient/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_ingredient/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_ingredient/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_ingredient/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_ingredient/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_ingredient/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_pizza/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_pizza/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_pizza/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_pizza/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_pizza/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_pizza/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/opening_time/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/opening_time/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/opening_time/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/opening_time/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/opening_time/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -118,16 +220,36 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1l66XibTxTZ8uETFSdmo6dO4IGR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/home" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\ALEmporter\templates\home" />
+      <recent name="C:\MAMP\htdocs\ALEmporter\public" />
+      <recent name="C:\MAMP\htdocs\ALEmporter" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -138,10 +260,41 @@
       <option name="presentableId" value="Default" />
       <updated>1606905234286</updated>
       <workItem from="1606905235440" duration="170000" />
+      <workItem from="1606905409675" duration="6406000" />
     </task>
+    <task id="LOCAL-00001" summary="creation">
+      <created>1606905635479</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606905635479</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="creation" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="553" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606905648956">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="553" y="273" key="Vcs.Push.Dialog.v2/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606905648956" />
   </component>
 </project>
