@@ -19,18 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="ajout legume">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201202134330.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/CheeseController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/Cheese.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Admin/CheeseType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/CheeseRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/cheese/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/cheese/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/cheese/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/cheese/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/cheese/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/cheese/show.html.twig" afterDir="false" />
+    <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="ajout des fromages">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201202135132.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/OtherController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/Other.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/Admin/OtherType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/OtherRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/other/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/other/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/other/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/other/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/other/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/other/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/admin_home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin_home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +193,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606905234286</updated>
       <workItem from="1606905235440" duration="170000" />
-      <workItem from="1606905409675" duration="9445000" />
+      <workItem from="1606905409675" duration="10267000" />
     </task>
     <task id="LOCAL-00001" summary="creation">
       <created>1606905635479</created>
@@ -229,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606916476161</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ajout des fromages">
+      <created>1606916998814</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606916998814</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +261,8 @@
     <MESSAGE value="update HomeController+ entity Meat" />
     <MESSAGE value="ajout fish" />
     <MESSAGE value="ajout legume" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout legume" />
+    <MESSAGE value="ajout des fromages" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout des fromages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="553" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606916479089">
