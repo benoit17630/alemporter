@@ -19,18 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="update HomeController+ entity Meat">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201202131057.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/FishController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/Fish.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Admin/FishType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/FishRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/fish/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/fish/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/fish/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/fish/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/fish/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/fish/show.html.twig" afterDir="false" />
+    <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="ajout fish">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201202132739.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/LegumeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/Legume.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/Admin/LegumeType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/LegumeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/legume/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/legume/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/legume/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/legume/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/legume/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/legume/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/admin_home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin_home/index.html.twig" afterDir="false" />
     </list>
@@ -193,7 +193,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606905234286</updated>
       <workItem from="1606905235440" duration="170000" />
-      <workItem from="1606905409675" duration="7888000" />
+      <workItem from="1606905409675" duration="9101000" />
     </task>
     <task id="LOCAL-00001" summary="creation">
       <created>1606905635479</created>
@@ -216,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606914335396</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ajout fish">
+      <created>1606915178840</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606915178840</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,12 +245,13 @@
     <MESSAGE value="creation" />
     <MESSAGE value="creation des ingredient de la base et du choix de la Base" />
     <MESSAGE value="update HomeController+ entity Meat" />
-    <option name="LAST_COMMIT_MESSAGE" value="update HomeController+ entity Meat" />
+    <MESSAGE value="ajout fish" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout fish" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="553" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606914340168">
+    <state x="553" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606915182299">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="553" y="273" key="Vcs.Push.Dialog.v2/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606914340168" />
+    <state x="553" y="273" key="Vcs.Push.Dialog.v2/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606915182299" />
   </component>
 </project>
