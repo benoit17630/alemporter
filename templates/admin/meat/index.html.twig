@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Meat index{% endblock %}
+
+{% block body %}
+    <h1>Meat index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for meat in meats %}
+            <tr>
+
+                <td>{{ meat.name }}</td>
+                <td>
+                    <a href="{{ path('admin_meat_show', {'id': meat.id}) }}">show</a>
+                    <a href="{{ path('admin_meat_edit', {'id': meat.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_meat_new') }}">Create new</a>
+{% endblock %}
