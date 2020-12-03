@@ -3,6 +3,8 @@
 namespace App\Entity\Admin;
 
 use App\Repository\Admin\BasePizzaRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,11 +24,19 @@ class BasePizza
      */
     private $name;
 
+
+
     /**
-     * @ORM\ManyToOne(targetEntity=BaseIngredient::class, inversedBy="basePizzas")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\OneToMany(targetEntity=Pizza::class, mappedBy="basepizza")
      */
-    private $baseIngredient;
+    private $pizzas;
+
+
+
+    public function __construct()
+    {
+        $this->pizzas = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -45,15 +55,37 @@ class BasePizza
         return $this;
     }
 
-    public function getBaseIngredient(): ?BaseIngredient
+
+
+    /**
+     * @return Collection|Pizza[]
+     */
+    public function getPizzas(): Collection
     {
-        return $this->baseIngredient;
+        return $this->pizzas;
     }
 
-    public function setBaseIngredient(?BaseIngredient $baseIngredient): self
+    public function addPizza(Pizza $pizza): self
     {
-        $this->baseIngredient = $baseIngredient;
+        if (!$this->pizzas->contains($pizza)) {
+            $this->pizzas[] = $pizza;
+            $pizza->setBasepizza($this);
+        }
 
         return $this;
     }
+
+    public function removePizza(Pizza $pizza): self
+    {
+        if ($this->pizzas->removeElement($pizza)) {
+            // set the owning side to null (unless already changed)
+            if ($pizza->getBasepizza() === $this) {
+                $pizza->setBasepizza(null);
+            }
+        }
+
+        return $this;
+    }
+
+
 }

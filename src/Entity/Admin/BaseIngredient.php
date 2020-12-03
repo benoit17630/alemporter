@@ -29,10 +29,18 @@ class BaseIngredient
      */
     private $basePizzas;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Pizza::class, mappedBy="baseIngredient")
+     */
+    private $pizzas;
+
     public function __construct()
     {
         $this->basePizzas = new ArrayCollection();
+        $this->pizzas = new ArrayCollection();
     }
+
+
 
     public function getId(): ?int
     {
@@ -52,32 +60,38 @@ class BaseIngredient
     }
 
     /**
-     * @return Collection|BasePizza[]
+     * @return Collection|Pizza[]
      */
-    public function getBasePizzas(): Collection
+    public function getPizzas(): Collection
     {
-        return $this->basePizzas;
+        return $this->pizzas;
     }
 
-    public function addBasePizza(BasePizza $basePizza): self
+    public function addPizza(Pizza $pizza): self
     {
-        if (!$this->basePizzas->contains($basePizza)) {
-            $this->basePizzas[] = $basePizza;
-            $basePizza->setBaseIngredient($this);
+        if (!$this->pizzas->contains($pizza)) {
+            $this->pizzas[] = $pizza;
+            $pizza->setBaseIngredient($this);
         }
 
         return $this;
     }
 
-    public function removeBasePizza(BasePizza $basePizza): self
+    public function removePizza(Pizza $pizza): self
     {
-        if ($this->basePizzas->removeElement($basePizza)) {
+        if ($this->pizzas->removeElement($pizza)) {
             // set the owning side to null (unless already changed)
-            if ($basePizza->getBaseIngredient() === $this) {
-                $basePizza->setBaseIngredient(null);
+            if ($pizza->getBaseIngredient() === $this) {
+                $pizza->setBaseIngredient(null);
             }
         }
 
         return $this;
     }
+
+
+
+
+
+
 }

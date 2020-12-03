@@ -10,7 +10,7 @@
             <tr>
 
                 <th>Name</th>
-                <th>Ingredient</th>
+
                 <th>actions</th>
             </tr>
         </thead>
@@ -18,7 +18,7 @@
         {% for base_pizza in base_pizzas %}
             <tr>
                 <td>{{ base_pizza.name }}</td>
-                <td>{{ base_pizza.baseIngredient.name }}</td>
+
                 <td>
                     <a href="{{ path('admin_base_pizza_show', {'id': base_pizza.id}) }}">show</a>
                     <a href="{{ path('admin_base_pizza_edit', {'id': base_pizza.id}) }}">edit</a>

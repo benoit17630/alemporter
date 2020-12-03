@@ -19,20 +19,38 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="ajout des fromages">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201202135132.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/OtherController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/Other.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Admin/OtherType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/OtherRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/other/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/other/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/other/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/other/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/other/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/other/show.html.twig" afterDir="false" />
+    <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="ajout de la categorie divers">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201202141402.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201202145629.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201202150831.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201202152709.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201202153745.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201203155443.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/PizzaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/Pizza.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/Admin/PizzaType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/PizzaRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/pizza/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/pizza/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/pizza/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/pizza/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/pizza/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/pizza/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/BaseIngredient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/BaseIngredient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/BasePizza.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/BasePizza.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/Cheese.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/Cheese.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/Fish.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/Fish.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/Legume.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/Legume.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/Meat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/Meat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/Other.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/Other.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Admin/BasePizzaType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Admin/BasePizzaType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/admin_home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin_home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base_pizza/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_pizza/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +192,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -193,7 +211,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606905234286</updated>
       <workItem from="1606905235440" duration="170000" />
-      <workItem from="1606905409675" duration="10267000" />
+      <workItem from="1606905409675" duration="36258000" />
     </task>
     <task id="LOCAL-00001" summary="creation">
       <created>1606905635479</created>
@@ -237,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606916998814</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ajout de la categorie divers">
+      <created>1606917591926</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606917591926</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,12 +287,21 @@
     <MESSAGE value="ajout fish" />
     <MESSAGE value="ajout legume" />
     <MESSAGE value="ajout des fromages" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout des fromages" />
+    <MESSAGE value="ajout de la categorie divers" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout de la categorie divers" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="553" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606916479089">
+    <state x="461" y="184" key="SettingsEditor" timestamp="1607006325049">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="553" y="273" key="Vcs.Push.Dialog.v2/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606916479089" />
+    <state x="461" y="184" key="SettingsEditor/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607006325049" />
+    <state x="553" y="273" key="Vcs.Push.Dialog.v2" timestamp="1606917595544">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="553" y="273" key="Vcs.Push.Dialog.v2/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606917595544" />
+    <state x="618" y="253" key="run.anything.popup" timestamp="1606919150592">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="618" y="253" key="run.anything.popup/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606919150592" />
   </component>
 </project>
