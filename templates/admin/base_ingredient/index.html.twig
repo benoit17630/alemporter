@@ -3,13 +3,15 @@
 {% block title %}BaseIngredient index{% endblock %}
 
 {% block body %}
-    <h1>BaseIngredient index</h1>
+    <div class="container police">
+    <h1 class="text-center mt-4">Liste des ingredients de la base</h1>
+        <a href="{{ path('admin_base_ingredient_new') }}" class="btn btn-primary mt-4">ajouter</a>
 
-    <table class="table">
+    <table class="table mt-4">
         <thead>
             <tr>
 
-                <th>Name</th>
+                <th>nom</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -19,8 +21,14 @@
 
                 <td>{{ base_ingredient.name }}</td>
                 <td>
-                    <a href="{{ path('admin_base_ingredient_show', {'id': base_ingredient.id}) }}">show</a>
-                    <a href="{{ path('admin_base_ingredient_edit', {'id': base_ingredient.id}) }}">edit</a>
+
+                    <a href="{{ path('admin_base_ingredient_edit', {'id': base_ingredient.id}) }}" class="btn btn-secondary">modifier</a>
+                    <form method="post" action="{{ path('admin_base_ingredient_delete', {'id': base_ingredient.id}) }}"
+                          onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ base_ingredient.name }}?');" style="display: inline-block">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ base_ingredient.id) }}" >
+                        <button class="btn btn-danger">Suprimer</button>
+                    </form>
                 </td>
             </tr>
         {% else %}
@@ -30,6 +38,7 @@
         {% endfor %}
         </tbody>
     </table>
+    </div>
 
-    <a href="{{ path('admin_base_ingredient_new') }}">Create new</a>
+
 {% endblock %}

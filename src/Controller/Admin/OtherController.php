@@ -48,15 +48,7 @@ class OtherController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="admin_other_show", methods={"GET"})
-     */
-    public function show(Other $other): Response
-    {
-        return $this->render('admin/other/show.html.twig', [
-            'other' => $other,
-        ]);
-    }
+
 
     /**
      * @Route("/{id}/edit", name="admin_other_edit", methods={"GET","POST"})

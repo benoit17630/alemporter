@@ -1,13 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Meat{% endblock %}
+{% block title %}Edit Viande {% endblock %}
 
 {% block body %}
-    <h1>Edit Meat</h1>
+    <div class="container police">
+    <h1 class="text-center mt-4">Modifier Viande</h1>
 
     {{ include('admin/meat/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('admin_meat_index') }}">back to list</a>
 
-    {{ include('admin/meat/_delete_form.html.twig') }}
+
+    </div>
 {% endblock %}

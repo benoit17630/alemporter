@@ -3,11 +3,12 @@
 {% block title %}Edit BasePizza{% endblock %}
 
 {% block body %}
-    <h1>Edit BasePizza</h1>
+    <div class="container police">
+    <h1 class="text-center mt-4">Modifier la base d une pizza</h1>
 
     {{ include('admin/base_pizza/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('admin_base_pizza_index') }}">back to list</a>
+    </div>
 
-    {{ include('admin/base_pizza/_delete_form.html.twig') }}
+
 {% endblock %}

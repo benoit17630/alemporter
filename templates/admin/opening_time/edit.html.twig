@@ -1,13 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit OpeningTime{% endblock %}
+{% block title %}editer les heures {% endblock %}
 
 {% block body %}
-    <h1>Edit OpeningTime</h1>
+    <div class="container police">
+    <h1 class="text-center">Editer horaire</h1>
 
-    {{ include('admin/opening_time/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/opening_time/_form.html.twig', {'button_label': 'Modifier'}) }}
+    </div>
 
-    <a href="{{ path('admin_opening_time_index') }}">back to list</a>
 
-    {{ include('admin/opening_time/_delete_form.html.twig') }}
+
 {% endblock %}

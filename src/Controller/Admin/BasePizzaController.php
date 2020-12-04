@@ -48,15 +48,7 @@ class BasePizzaController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="admin_base_pizza_show", methods={"GET"})
-     */
-    public function show(BasePizza $basePizza): Response
-    {
-        return $this->render('admin/base_pizza/show.html.twig', [
-            'base_pizza' => $basePizza,
-        ]);
-    }
+
 
     /**
      * @Route("/{id}/edit", name="admin_base_pizza_edit", methods={"GET","POST"})

@@ -3,14 +3,15 @@
 {% block title %}Legume index{% endblock %}
 
 {% block body %}
-    <h1>Legume index</h1>
-
-    <table class="table">
+    <div class="container police">
+    <h1 class="text-center mt-4">Liste des Legumes</h1>
+        <a href="{{ path('admin_legume_new') }}" class="btn btn-primary mt-4">Ajouter</a>
+    <table class="table mt-4">
         <thead>
             <tr>
 
-                <th>Name</th>
-                <th>actions</th>
+                <th>Nom</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -19,8 +20,14 @@
 
                 <td>{{ legume.name }}</td>
                 <td>
-                    <a href="{{ path('admin_legume_show', {'id': legume.id}) }}">show</a>
-                    <a href="{{ path('admin_legume_edit', {'id': legume.id}) }}">edit</a>
+
+                    <a href="{{ path('admin_legume_edit', {'id': legume.id}) }}" class="btn btn-secondary">Modifier</a>
+                    <form method="post" action="{{ path('admin_legume_delete', {'id': legume.id}) }}"
+                          onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ legume.name }}?');" style="display: inline-block">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ legume.id) }}" >
+                        <button class="btn btn-danger">Suprimer</button>
+                    </form>
                 </td>
             </tr>
         {% else %}
@@ -30,6 +37,6 @@
         {% endfor %}
         </tbody>
     </table>
+    </div>
 
-    <a href="{{ path('admin_legume_new') }}">Create new</a>
 {% endblock %}

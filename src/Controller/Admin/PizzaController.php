@@ -4,8 +4,6 @@ namespace App\Controller\Admin;
 
 use App\Entity\Admin\Pizza;
 use App\Form\Admin\PizzaType;
-use App\Repository\Admin\FishRepository;
-use App\Repository\Admin\MeatRepository;
 use App\Repository\Admin\PizzaRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;

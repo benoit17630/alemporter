@@ -48,15 +48,7 @@ class FishController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="admin_fish_show", methods={"GET"})
-     */
-    public function show(Fish $fish): Response
-    {
-        return $this->render('admin/fish/show.html.twig', [
-            'fish' => $fish,
-        ]);
-    }
+
 
     /**
      * @Route("/{id}/edit", name="admin_fish_edit", methods={"GET","POST"})

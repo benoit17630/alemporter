@@ -28,11 +28,11 @@
                             {% if pizza.isActive %}
 
 
-                    <li class="col-lg-6 col-12 mt-3">
-                        <ul class="row text-left">
-                            <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
-                            <li class="col-2 offset-4">{{ pizza.price }}€</li>
-                            <li class="col-12 arial">
+                                <li class="col-lg-6 col-12 mt-3">
+                                <ul class="row text-left">
+                                <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
+                                <li class="col-2 offset-4">{{ pizza.price }}€</li>
+                                <li class="col-12 arial">
                                 {{ pizza.baseIngredient.name }}
 
                                 {% for meat in pizza.meat %}
@@ -50,10 +50,10 @@
                                 {% for legume in pizza.legume %}
                                     {{ legume.name }}
                                 {% endfor %}
-                                {% endif %}
-                                {% endif %}
-                                </li>
-                            </ul>
+                            {% endif %}
+                        {% endif %}
+                        </li>
+                        </ul>
                         </li>
                     {% endfor %}
 
@@ -71,32 +71,34 @@
                 <ul class=" col-8 row text-left  ">
                     {% for pizza in pizzas %}
                         {% if  pizza.basepizza.name() == "créme fraîche" %}
-                        <li class="col-lg-6 col-12 mt-3">
-                            <ul class="row text-left">
-                                <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
-                                <li class="col-2 offset-4">{{ pizza.price }}€</li>
-                                <li class="col-12 arial">
-                                    {{ pizza.baseIngredient.name }}
+                            {% if pizza.isActive %}
+                                <li class="col-lg-6 col-12 mt-3">
+                                    <ul class="row text-left">
+                                        <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
+                                        <li class="col-2 offset-4">{{ pizza.price }}€</li>
+                                        <li class="col-12 arial">
+                                            {{ pizza.baseIngredient.name }}
 
-                                    {% for meat in pizza.meat %}
-                                        {{ meat.name }}
-                                    {% endfor %}
-                                    {% for fish in pizza.fish %}
-                                        {{ fish.name }}
-                                    {% endfor %}
-                                    {% for other in pizza.other %}
-                                        {{ other.name }}
-                                    {% endfor %}
-                                    {% for cheese in pizza.cheese %}
-                                        {{ cheese.name }}
-                                    {% endfor %}
-                                    {% for legume in pizza.legume %}
-                                        {{ legume.name }}
-                                    {% endfor %}
+                                            {% for meat in pizza.meat %}
+                                                {{ meat.name }}
+                                            {% endfor %}
+                                            {% for fish in pizza.fish %}
+                                                {{ fish.name }}
+                                            {% endfor %}
+                                            {% for other in pizza.other %}
+                                                {{ other.name }}
+                                            {% endfor %}
+                                            {% for cheese in pizza.cheese %}
+                                                {{ cheese.name }}
+                                            {% endfor %}
+                                            {% for legume in pizza.legume %}
+                                                {{ legume.name }}
+                                            {% endfor %}
+                                        </li>
+                                    </ul>
                                 </li>
-                            </ul>
-                        </li>
-                        {%  endif %}
+                            {%  endif %}
+                        {% endif %}
                     {% endfor %}
 
                 </ul>
@@ -116,33 +118,33 @@
                             {% if pizza.isActive %}
 
 
-                            <li class="col-lg-6 col-12 mt-3">
-                                <ul class="row text-left">
-                                    <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
-                                    <li class="col-2 offset-4">{{ pizza.price }}€</li>
-                                    <li class="col-12 arial">
-                                        {{ pizza.baseIngredient.name }}
+                                <li class="col-lg-6 col-12 mt-3">
+                                    <ul class="row text-left">
+                                        <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
+                                        <li class="col-2 offset-4">{{ pizza.price }}€</li>
+                                        <li class="col-12 arial">
+                                            {{ pizza.baseIngredient.name }}
 
-                                        {% for meat in pizza.meat %}
-                                            {{ meat.name }}
-                                        {% endfor %}
-                                        {% for fish in pizza.fish %}
-                                            {{ fish.name }}
-                                        {% endfor %}
-                                        {% for other in pizza.other %}
-                                            {{ other.name }}
-                                        {% endfor %}
-                                        {% for cheese in pizza.cheese %}
-                                            {{ cheese.name }}
-                                        {% endfor %}
-                                        {% for legume in pizza.legume %}
-                                            {{ legume.name }}
-                                        {% endfor %}
-                                    </li>
-                                </ul>
-                            </li>
-                        {%  endif %}
-                  {% endif %}
+                                            {% for meat in pizza.meat %}
+                                                {{ meat.name }}
+                                            {% endfor %}
+                                            {% for fish in pizza.fish %}
+                                                {{ fish.name }}
+                                            {% endfor %}
+                                            {% for other in pizza.other %}
+                                                {{ other.name }}
+                                            {% endfor %}
+                                            {% for cheese in pizza.cheese %}
+                                                {{ cheese.name }}
+                                            {% endfor %}
+                                            {% for legume in pizza.legume %}
+                                                {{ legume.name }}
+                                            {% endfor %}
+                                        </li>
+                                    </ul>
+                                </li>
+                            {%  endif %}
+                        {% endif %}
                     {% endfor %}
 
 

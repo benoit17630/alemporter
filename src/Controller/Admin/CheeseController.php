@@ -48,15 +48,7 @@ class CheeseController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="admin_cheese_show", methods={"GET"})
-     */
-    public function show(Cheese $cheese): Response
-    {
-        return $this->render('admin/cheese/show.html.twig', [
-            'cheese' => $cheese,
-        ]);
-    }
+
 
     /**
      * @Route("/{id}/edit", name="admin_cheese_edit", methods={"GET","POST"})

@@ -17,6 +17,8 @@ class OpeningTimeController extends AbstractController
 {
     /**
      * @Route("/", name="admin_opening_time_index", methods={"GET"})
+     * @param OpeningTimeRepository $openingTimeRepository
+     * @return Response
      */
     public function index(OpeningTimeRepository $openingTimeRepository): Response
     {
@@ -27,6 +29,8 @@ class OpeningTimeController extends AbstractController
 
     /**
      * @Route("/new", name="admin_opening_time_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -49,9 +53,11 @@ class OpeningTimeController extends AbstractController
     }
 
 
-
     /**
      * @Route("/{id}/edit", name="admin_opening_time_edit", methods={"GET","POST"})
+     * @param Request $request
+     * @param OpeningTime $openingTime
+     * @return Response
      */
     public function edit(Request $request, OpeningTime $openingTime): Response
     {
@@ -72,6 +78,9 @@ class OpeningTimeController extends AbstractController
 
     /**
      * @Route("/{id}", name="admin_opening_time_delete", methods={"DELETE"})
+     * @param Request $request
+     * @param OpeningTime $openingTime
+     * @return Response
      */
     public function delete(Request $request, OpeningTime $openingTime): Response
     {

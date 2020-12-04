@@ -1,10 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Other index{% endblock %}
+{% block title %}Autre index{% endblock %}
 
 {% block body %}
-    <h1>Other index</h1>
-
+    <div class="container police">
+    <h1>Liste des Autres</h1>
+        <a href="{{ path('admin_other_new') }}" class="btn btn-primary">ajouter</a>
     <table class="table">
         <thead>
             <tr>
@@ -19,8 +20,14 @@
 
                 <td>{{ other.name }}</td>
                 <td>
-                    <a href="{{ path('admin_other_show', {'id': other.id}) }}">show</a>
-                    <a href="{{ path('admin_other_edit', {'id': other.id}) }}">edit</a>
+
+                    <a href="{{ path('admin_other_edit', {'id': other.id}) }}" class="btn btn-secondary">edit</a>
+                    <form method="post" action="{{ path('admin_other_delete', {'id': other.id}) }}"
+                          onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ other.name }}?');" style="display: inline-block">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ other.id) }}" >
+                        <button class="btn btn-danger">Suprimer</button>
+                    </form>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +38,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_other_new') }}">Create new</a>
+
+    </div>
 {% endblock %}

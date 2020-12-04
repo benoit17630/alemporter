@@ -25,8 +25,15 @@
                 <td class="">{{ pizza.basepizza.name }}</td>
                 <td class="">{{ pizza.price }}</td>
                 <td class="">
+
                     <a href="{{ path('admin_pizza_edit', {'id': pizza.id}) }}" class="btn btn-primary">modifier</a>
-                    <a href="{{ path('admin_pizza_delete', {'id': pizza.id}) }}" class="btn btn-danger">Suprimer</a>
+
+                    <form method="post" action="{{ path('admin_pizza_delete', {'id': pizza.id}) }}"
+                          onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ pizza.name }}?');" style="display: inline-block">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ pizza.id) }}" >
+                        <button class="btn btn-danger">Suprimer</button>
+                    </form>
                 </td>
             </tr>
         {% else %}

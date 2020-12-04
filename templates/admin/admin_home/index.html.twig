@@ -3,35 +3,39 @@
 {% block title %}index admin {% endblock %}
 
 {% block body %}
-<div class="container  ">
-    <h2 class="police">Page d'adminstration</h2>
-    <div class="col-3 ">
-        <a href="{{ path('admin_opening_time_index') }}" class="arial">changer les horaires</a>
+    <div class="container police ">
+        <h2 class="">Page d'adminstration</h2>
+        <div class="row align-items-center">
+            <div class="col-3 ">
+
+                <a href="{{ path('admin_opening_time_index') }}" class="btn btn-primary">changer les horaires</a>
+
+            </div>
+            <div class="col-3 mt-3">
+                <a href="{{ path('admin_base_ingredient_index') }}" class="btn btn-primary">Gerer les ingredients des Bases</a>
+            </div>
+            <div class="col-3 mt-3">
+                <a href="{{ path('admin_base_pizza_index') }}" class="btn btn-primary" >Gerer les Bases des Pizzas</a>
+            </div>
+            <div class="col-3 mt-3">
+                <a href="{{ path('admin_meat_index') }}" class="btn btn-primary">Gerer les viandes</a>
+            </div>
+            <div class="col-3 mt-3">
+                <a href="{{ path('admin_fish_index') }}" class="btn btn-primary">Gerer les produits de la mer</a>
+            </div>
+            <div class="col-3 mt-3">
+                <a href="{{ path('admin_legume_index') }}" class="btn btn-primary">Gerer les legumes</a>
+            </div>
+            <div class="col-3 mt-3">
+                <a href="{{ path('admin_cheese_index') }}" class="btn btn-primary">Gerer les fromages</a>
+            </div>
+            <div class="col-3 mt-3">
+                <a href="{{ path('admin_other_index') }}" class="btn btn-primary">Gerer les autres ingredients</a>
+            </div>
+            <div class="col-3 mt-3">
+                <a href="{{ path('admin_pizza_index') }}" class="btn btn-primary">Gerer les Pizzas</a>
+            </div>
+        </div>
     </div>
-    <div class="col-3 ">
-        <a href="{{ path('admin_base_ingredient_index') }}">Gerer les ingredients des Bases</a>
-    </div>
-    <div class="col-3 ">
-        <a href="{{ path('admin_base_pizza_index') }}">Gerer les Bases des Pizzas</a>
-    </div>
-    <div class="col-3 ">
-        <a href="{{ path('admin_meat_index') }}">Gerer les viandes</a>
-    </div>
-    <div class="col-3 ">
-        <a href="{{ path('admin_fish_index') }}">Gerer les produits de la mer</a>
-    </div>
-    <div class="col-3 ">
-        <a href="{{ path('admin_legume_index') }}">Gerer les legumes</a>
-    </div>
-    <div class="col-3 ">
-        <a href="{{ path('admin_cheese_index') }}">Gerer les fromages</a>
-    </div>
-    <div class="col-3 ">
-        <a href="{{ path('admin_other_index') }}">Gerer les autres ingredients</a>
-    </div>
-    <div class="col-3 ">
-        <a href="{{ path('admin_pizza_index') }}">Gerer les Pizzas</a>
-    </div>
-</div>
 
 {% endblock %}

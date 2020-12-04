@@ -1,13 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Other{% endblock %}
+{% block title %}Edit autre{% endblock %}
 
 {% block body %}
-    <h1>Edit Other</h1>
+    <div class="container police">
+        <h1 class="text-center mt-4">Editer Autre</h1>
 
-    {{ include('admin/other/_form.html.twig', {'button_label': 'Update'}) }}
+        {{ include('admin/other/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-    <a href="{{ path('admin_other_index') }}">back to list</a>
 
-    {{ include('admin/other/_delete_form.html.twig') }}
+
+
+    </div>
 {% endblock %}

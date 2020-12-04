@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}OpeningTime index{% endblock %}
+{% block title %}Liste des horaires{% endblock %}
 
 {% block body %}
-    <div class="container">
-    <h1 class="text-center">Liste des horaire disponible </h1>
+    <div class="container police ">
+    <h1 class="text-center mt-4">Liste des horaire disponible </h1>
 
-    <table class="table">
+    <table class="table mt-4">
         <thead>
             <tr>
 
@@ -20,14 +20,19 @@
             <tr>
 
                 <td>{{ opening_time.name }}</td>
-                <td>{{ opening_time.isActive ? 'Yes' : 'No' }}</td>
+                <td>{{ opening_time.isActive ? 'oui' : 'Non' }}</td>
                 <td>
-                    <button class="btn btn-secondary">
-                    <a href="{{ path('admin_opening_time_edit', {'id': opening_time.id}) }}">Modifier</a>
-                    </button>
-                    <button class="btn btn-danger">
-                    <a href="{{ path('admin_opening_time_delete', {'id': opening_time.id}) }}">Suprimer</a>
-                    </button>
+
+                    <a href="{{ path('admin_opening_time_edit', {'id': opening_time.id}) }}" class="btn btn-secondary">Modifier</a>
+
+
+                    <form method="post" action="{{ path('admin_opening_time_delete', {'id': opening_time.id}) }}"
+                          onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ opening_time.name }}?');" style="display: inline-block">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ opening_time.id) }}" >
+                        <button class="btn btn-danger">Suprimer</button>
+                    </form>
+
                 </td>
             </tr>
         {% else %}
@@ -38,6 +43,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('admin_opening_time_new') }}">Create new</a>
+    <a href="{{ path('admin_opening_time_new') }}" class="btn btn-primary">Ajouter</a>
     </div>
 {% endblock %}

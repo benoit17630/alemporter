@@ -3,33 +3,41 @@
 {% block title %}Meat index{% endblock %}
 
 {% block body %}
-    <h1>Meat index</h1>
-
-    <table class="table">
-        <thead>
+    <div class="container police mt-4">
+        <h1 class="text-center">Liste des viandes</h1>
+        <a href="{{ path('admin_meat_new') }}" class="btn btn-primary">Ajouter</a>
+        <table class="table mt-4">
+            <thead>
             <tr>
 
                 <th>Name</th>
                 <th>actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for meat in meats %}
-            <tr>
+            </thead>
+            <tbody>
+            {% for meat in meats %}
+                <tr>
 
-                <td>{{ meat.name }}</td>
-                <td>
-                    <a href="{{ path('admin_meat_show', {'id': meat.id}) }}">show</a>
-                    <a href="{{ path('admin_meat_edit', {'id': meat.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                    <td>{{ meat.name }}</td>
+                    <td>
 
-    <a href="{{ path('admin_meat_new') }}">Create new</a>
+                        <a href="{{ path('admin_meat_edit', {'id': meat.id}) }}" class="btn btn-secondary">edit</a>
+                        <form method="post" action="{{ path('admin_meat_delete', {'id': meat.id}) }}"
+                              onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ meat.name }}?');" style="display: inline-block">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ meat.id) }}" >
+                            <button class="btn btn-danger">Suprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
 {% endblock %}

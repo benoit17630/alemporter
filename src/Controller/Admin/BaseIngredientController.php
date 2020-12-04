@@ -48,15 +48,6 @@ class BaseIngredientController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="admin_base_ingredient_show", methods={"GET"})
-     */
-    public function show(BaseIngredient $baseIngredient): Response
-    {
-        return $this->render('admin/base_ingredient/show.html.twig', [
-            'base_ingredient' => $baseIngredient,
-        ]);
-    }
 
     /**
      * @Route("/{id}/edit", name="admin_base_ingredient_edit", methods={"GET","POST"})

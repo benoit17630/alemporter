@@ -3,9 +3,10 @@
 {% block title %}New Legume{% endblock %}
 
 {% block body %}
-    <h1>Create new Legume</h1>
+    <div class="container police">
+    <h1 class="text-center mt-4">Create new Legume</h1>
 
     {{ include('admin/legume/_form.html.twig') }}
 
-    <a href="{{ path('admin_legume_index') }}">back to list</a>
+    </div>
 {% endblock %}

@@ -48,15 +48,7 @@ class MeatController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="admin_meat_show", methods={"GET"})
-     */
-    public function show(Meat $meat): Response
-    {
-        return $this->render('admin/meat/show.html.twig', [
-            'meat' => $meat,
-        ]);
-    }
+
 
     /**
      * @Route("/{id}/edit", name="admin_meat_edit", methods={"GET","POST"})

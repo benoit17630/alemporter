@@ -48,15 +48,7 @@ class LegumeController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="admin_legume_show", methods={"GET"})
-     */
-    public function show(Legume $legume): Response
-    {
-        return $this->render('admin/legume/show.html.twig', [
-            'legume' => $legume,
-        ]);
-    }
+
 
     /**
      * @Route("/{id}/edit", name="admin_legume_edit", methods={"GET","POST"})

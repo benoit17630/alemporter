@@ -3,11 +3,11 @@
 {% block title %}Edit Legume{% endblock %}
 
 {% block body %}
-    <h1>Edit Legume</h1>
+    <div class="container police">
+    <h1 class="text-center">Modifier Legume</h1>
 
     {{ include('admin/legume/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('admin_legume_index') }}">back to list</a>
 
-    {{ include('admin/legume/_delete_form.html.twig') }}
+    </div>
 {% endblock %}
