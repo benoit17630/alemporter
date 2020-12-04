@@ -1,4 +1,58 @@
 {{ form_start(form) }}
+{{ form_errors(form) }}
+<div class="container ">
+    <div class="row police justify-content-center">
+        <div class="col-3">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+        </div>
+        <div class="col-3">
+            {{ form_label(form.comment) }}
+            {{ form_widget(form.comment) }}
+        </div>
+        <div class="col-1 ">
+            {{ form_label(form.price) }}
+            {{ form_widget(form.price) }}
+        </div>
+    </div>
+    <div class="row police justify-content-center">
+        <div class="col-3 mt-4">
+            {{ form_label(form.basepizza) }}
+            {{ form_widget(form.basepizza) }}
+        </div>
+        <div class="col-4 mt-4">
+            {{ form_label(form.baseIngredient) }}
+            {{ form_widget(form.baseIngredient) }}
+        </div>
+        <div class="row police justify-content-center">
+            <div class="col-7 mt-4">
+                {{ form_label(form.meat) }}
+                {{ form_widget(form.meat) }}
+            </div>
+            <div class="col-7 mt-4">
+                {{ form_label(form.fish) }}
+                {{ form_widget(form.fish) }}
+            </div>
+            <div class="col-7 mt-4">
+                {{ form_label(form.legume) }}
+                {{ form_widget(form.legume) }}
+            </div>
+            <div class="col-7 mt-4">
+                {{ form_label(form.cheese) }}
+                {{ form_widget(form.cheese) }}
+            </div>
+            <div class="col-7 mt-4">
+                {{ form_label(form.other) }}
+                {{ form_widget(form.other) }}
+            </div>
+            <div class="col-7 mt-4">
+                {{ form_label(form.isActive) }}
+                {{ form_widget(form.isActive) }}
+            </div>
+    </div>
+
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+    <button class="btn btn-primary mt-4">{{ button_label|default('sauvegarder') }}</button>
+</div>
+    {{ form_end(form) }}
+

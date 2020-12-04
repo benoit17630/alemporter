@@ -89,6 +89,9 @@ class PizzaType extends AbstractType
 
 
             ])
+            ->add("isActive", null,[
+                'label'=>"a afficher"
+            ])
 
         ;
     }

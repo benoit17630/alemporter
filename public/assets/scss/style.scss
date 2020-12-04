@@ -10,9 +10,12 @@
     src: url("../font/StencilStd.otf");
 }
 body {
-    font-family: "StencilStd", sans-serif;
+
     background: $maronclair;
     color: $maron;
+}
+.police{
+    font-family: "StencilStd", sans-serif;
 }
 /*header*/
 header {
@@ -64,34 +67,43 @@ h2 {
 ul {
     li {
         list-style: none;
+
         .arial {
             font-family: Arial, Helvetica, sans-serif;
         }
     }
 }
-.basecreme {
-    padding: 30px 0;
-    background-color: #ec5633;
-    color: $blanc;
-    h2 {
+
+    .basecreme {
+        padding: 30px 0;
+        background-color: #ec5633;
         color: $blanc;
-    }
-}
-#special {
-    padding: 30px 0;
-}
-#contact {
-    padding: 30px 0;
-    background-color: #4b2f07;
-    color: $blanc;
-}
-/*footer*/
-footer {
-    text-align: center;
-    .arial {
-        font: {
-            family: Arial, Helvetica, sans-serif;
-            size: 12px;
+        h2 {
+            color: $blanc;
         }
     }
-}
+
+    #special {
+        padding: 30px 0;
+    }
+
+    #contact {
+        padding: 30px 0;
+        background-color: #4b2f07;
+        color: $blanc;
+    }
+
+    .arial{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /*footer*/
+    footer {
+        text-align: center;
+        .arial {
+            font: {
+                family: Arial, Helvetica, sans-serif;
+                size: 12px;
+            }
+        }
+    }
+

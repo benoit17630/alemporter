@@ -1,19 +1,20 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 @font-face {
   font-family: "StencilStd";
-  src: url("../font/StencilStd.otf"); }
+  src: url("../font/StencilStd.otf");
+}
 body {
-  font-family: "StencilStd", serif;
   background: #f2e2cb;
   color: #4b2f07;
-
 }
 
+.police {
+  font-family: "StencilStd", sans-serif;
+}
 
 /*header*/
 header {
@@ -21,67 +22,90 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #ec5633; }
-  header a {
-    color: white; }
-    header a:hover {
-      color: white;
-      text-decoration: none;
-      background-color: rgba(0, 0, 0, 0.3); }
- 
+  background-color: #ec5633;
+}
+header a {
+  color: white;
+}
+header a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 #conect {
-  color: black; }
-  #conect:hover {
-    color: white; }
+  color: black;
+}
+#conect:hover {
+  color: white;
+}
 
 /*main*/
 .fond1 {
-  background-color: #d6c8b4; }
+  background-color: #d6c8b4;
+}
 
 strong {
-  color: #ec5633; }
+  color: #ec5633;
+}
 
 em {
-  font-size: smaller; }
+  font-size: smaller;
+}
 
 .intersection {
   background: url("../img/intersection.jpg");
   width: 190px;
   height: 114px;
-  margin: 40px auto 0; }
+  margin: 40px auto 0;
+}
 
 h2 {
   text-align: center;
-  padding: 30px 0; }
+  padding: 30px 0;
+}
 
 #basetomate {
-  padding: 30px 0; }
+  padding: 30px 0;
+}
 
 ul li {
-  list-style: none; }
-  ul li .arial {
-    font-family: Arial, Helvetica, sans-serif; }
+  list-style: none;
+}
+ul li .arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .basecreme {
   padding: 30px 0;
   background-color: #ec5633;
-  color: white; }
-  .creme {
-    color: white; }
+  color: white;
+}
+.basecreme h2 {
+  color: white;
+}
 
 #special {
-  padding: 30px 0; }
+  padding: 30px 0;
+}
 
 #contact {
   padding: 30px 0;
   background-color: #4b2f07;
-  color: white; }
+  color: white;
+}
+
+.arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /*footer*/
 footer {
-  text-align: center; }
-  footer .arial {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px; }
+  text-align: center;
+}
+footer .arial {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,28 +1,32 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pizza index{% endblock %}
+{% block title %}Liste des Pizzas{% endblock %}
 
 {% block body %}
-    <h1>Pizza index</h1>
+    <div class="container police ">
+    <h1 class="text-center mt-5">Liste des Pizzas</h1>
+        <a href="{{ path('admin_pizza_new') }}" class="btn btn-primary mt-5">ajouter</a>
+    <table class="table mt-5 ">
+        <thead class="">
+            <tr class="">
 
-    <table class="table">
-        <thead>
-            <tr>
+                <th class="">Nom</th>
+                <th class="">Base</th>
+                <th class="">Prix</th>
+                <th class="">Actions</th>
 
-                <th>Name</th>
-                <th>Price</th>
-                <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for pizza in pizzas %}
             <tr>
 
-                <td>{{ pizza.name }}</td>
-                <td>{{ pizza.price }}</td>
-                <td>
-                    <a href="{{ path('admin_pizza_show', {'id': pizza.id}) }}">show</a>
-                    <a href="{{ path('admin_pizza_edit', {'id': pizza.id}) }}">edit</a>
+                <td class="">{{ pizza.name }}</td>
+                <td class="">{{ pizza.basepizza.name }}</td>
+                <td class="">{{ pizza.price }}</td>
+                <td class="">
+                    <a href="{{ path('admin_pizza_edit', {'id': pizza.id}) }}" class="btn btn-primary">modifier</a>
+                    <a href="{{ path('admin_pizza_delete', {'id': pizza.id}) }}" class="btn btn-danger">Suprimer</a>
                 </td>
             </tr>
         {% else %}
@@ -32,6 +36,5 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('admin_pizza_new') }}">Create new</a>
+    </div>
 {% endblock %}

@@ -22,7 +22,7 @@ class HomeController extends AbstractController
     {
 
         $horaires =$timeRepository->findAll();
-        $pizzas = $pizzaRepository->findAll();
+        $pizzas = $pizzaRepository->findBy( [], ["price"=>"asc"]);
 
 
 

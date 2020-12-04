@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Pizza{% endblock %}
+{% block title %}ajouter pizza{% endblock %}
 
 {% block body %}
-    <h1>Create new Pizza</h1>
+    <div class="container">
+    <h1 class="police text-center mb-5 mt-5">Ajouter Pizza</h1>
 
     {{ include('admin/pizza/_form.html.twig') }}
 
-    <a href="{{ path('admin_pizza_index') }}">back to list</a>
+
+    </div>
 {% endblock %}

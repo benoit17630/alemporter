@@ -54,23 +54,7 @@ class PizzaController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="admin_pizza_show", methods={"GET"})
-     * @param Pizza $pizza
-     * @param MeatRepository $meatRepository
-     * @param FishRepository $fishRepository
-     * @return Response
-     */
-    public function show(Pizza $pizza): Response
-    {
 
-
-        return $this->render('admin/pizza/show.html.twig', [
-            'pizza' => $pizza,
-
-
-        ]);
-    }
 
     /**
      * @Route("/{id}/edit", name="admin_pizza_edit", methods={"GET","POST"})
