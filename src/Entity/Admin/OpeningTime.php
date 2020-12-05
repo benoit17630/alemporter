@@ -4,9 +4,12 @@ namespace App\Entity\Admin;
 
 use App\Repository\Admin\OpeningTimeRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=OpeningTimeRepository::class)
+ * @UniqueEntity("name")
  */
 class OpeningTime
 {
@@ -19,6 +22,8 @@ class OpeningTime
 
     /**
      * @ORM\Column(type="text")
+     *
+     * @Assert\NotBlank(message="le formulaire est vide")
      */
     private $name;
 

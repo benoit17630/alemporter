@@ -6,9 +6,12 @@ use App\Repository\Admin\BasePizzaRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=BasePizzaRepository::class)
+ * @UniqueEntity("name")
  */
 class BasePizza
 {
@@ -21,6 +24,13 @@ class BasePizza
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *      min = "4",
+     *      max = 50,
+     *      minMessage = "au mini un mot de {{ limit }} ",
+     *      maxMessage = "ne peut pas depasser {{ limit }} lettres"
+     * )
+     * @Assert\NotBlank(message="le formulaire est vide")
      */
     private $name;
 

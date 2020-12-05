@@ -26,7 +26,7 @@
                 <td class="">{{ pizza.price }}</td>
                 <td class="">
 
-                    <a href="{{ path('admin_pizza_edit', {'id': pizza.id}) }}" class="btn btn-primary">modifier</a>
+                    <a href="{{ path('admin_pizza_edit', {'id': pizza.id}) }}" class="btn btn-secondary">modifier</a>
 
                     <form method="post" action="{{ path('admin_pizza_delete', {'id': pizza.id}) }}"
                           onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ pizza.name }}?');" style="display: inline-block">

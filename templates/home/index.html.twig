@@ -6,7 +6,9 @@
     <div class="container-fluid ">
         <div class="row  py-5 " id="accueil">
 
-            <div class="col-6 offset-3"><img src="{{ asset('assets/img/logo.jpg') }}" alt="" class="img-fluid"></div>
+            <div class="col-6 offset-3">
+                <img src="{{ asset('assets/img/logo.jpg') }}" alt="" class="img-fluid">
+            </div>
         </div>
         <div class="row justify-content-center fond1 py-5 police">
             <p class="col-6 text-center">Nous vous proposons une <strong>gamme variée de pizzas</strong> à partir
@@ -20,53 +22,60 @@
             <h2>Nos Pizzas Base Tomate</h2>
 
             <article class="row justify-content-around text-center">
-                <div class="col-lg-2 d-none d-lg-block"><img src="{{ asset('assets/img/pizza1.jpg') }}" alt="" class="img-fluid"></div>
+                <div class="col-lg-2 d-none d-lg-block">
+                    <img src="{{ asset('assets/img/pizza1.jpg') }}" alt="" class="img-fluid">
+                </div>
                 <ul class=" col-8 row text-left">
 
                     {% for pizza in pizzas %}
                         {% if  pizza.basepizza.name()  == "tomate"%}
                             {% if pizza.isActive %}
 
-
                                 <li class="col-lg-6 col-12 mt-3">
-                                <ul class="row text-left">
-                                <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
-                                <li class="col-2 offset-4">{{ pizza.price }}€</li>
-                                <li class="col-12 arial">
-                                {{ pizza.baseIngredient.name }}
+                                    <ul class="row text-left">
+                                        <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
+                                        <li class="col-2 offset-4">{{ pizza.price }}€</li>
+                                        <li class="col-12 arial">
+                                            {{ pizza.baseIngredient.name }}
 
-                                {% for meat in pizza.meat %}
-                                    {{ meat.name }}
-                                {% endfor %}
-                                {% for fish in pizza.fish %}
-                                    {{ fish.name }}
-                                {% endfor %}
-                                {% for other in pizza.other %}
-                                    {{ other.name }}
-                                {% endfor %}
-                                {% for cheese in pizza.cheese %}
-                                    {{ cheese.name }}
-                                {% endfor %}
-                                {% for legume in pizza.legume %}
-                                    {{ legume.name }}
-                                {% endfor %}
+                                            {% for meat in pizza.meat %}
+                                                {{ meat.name }}
+                                            {% endfor %}
+                                            {% for fish in pizza.fish %}
+                                                {{ fish.name }}
+                                            {% endfor %}
+                                            {% for other in pizza.other %}
+                                                {{ other.name }}
+                                            {% endfor %}
+                                            {% for cheese in pizza.cheese %}
+                                                {{ cheese.name }}
+                                            {% endfor %}
+                                            {% for legume in pizza.legume %}
+                                                {{ legume.name }}
+                                            {% endfor %}
+
+                                        </li>
+                                    </ul>
+                                </li>
                             {% endif %}
                         {% endif %}
-                        </li>
-                        </ul>
-                        </li>
                     {% endfor %}
 
                 </ul>
-                <div class="col-lg-2 d-none d-lg-block"><img src="{{ asset('assets/img/pizza1.jpg') }}" alt="" class="img-fluid"></div>
+                <div class="col-lg-2 d-none d-lg-block">
+                    <img src="{{ asset('assets/img/pizza1.jpg') }}" alt="" class="img-fluid">
+                </div>
             </article>
             <div class="intersection mb-5" id="basecreme"></div>
         </section>
+
         <section class="basecreme police">
             <h2 class="creme ">Nos Pizzas Base Crème Fraiche</h2>
 
             <article class="row justify-content-around text-center align-items-center ">
-                <div class="col-lg-2 d-none d-lg-flex"><img src="{{ asset('assets/img/pizza2.jpg') }}" alt="" class="img-fluid"></div>
+                <div class="col-lg-2 d-none d-lg-flex">
+                    <img src="{{ asset('assets/img/pizza2.jpg') }}" alt="" class="img-fluid">
+                </div>
 
                 <ul class=" col-8 row text-left  ">
                     {% for pizza in pizzas %}
@@ -100,11 +109,13 @@
                             {%  endif %}
                         {% endif %}
                     {% endfor %}
-
                 </ul>
-                <div class="col-lg-2 d-none d-lg-flex"><img src="{{ asset('assets/img/pizza2.jpg') }}" alt="" class="img-fluid"></div>
+                <div class="col-lg-2 d-none d-lg-flex">
+                    <img src="{{ asset('assets/img/pizza2.jpg') }}" alt="" class="img-fluid">
+                </div>
             </article>
         </section>
+
         <section id="special" class="container-fluid police">
 
             <h2>Nos Pizzas Spéciales</h2>
@@ -113,10 +124,8 @@
                 <ul class="col-8 row text-left">
                     {% for pizza in pizzas %}
 
-
                         {% if  pizza.basepizza.name() == "les spéciales" %}
                             {% if pizza.isActive %}
-
 
                                 <li class="col-lg-6 col-12 mt-3">
                                     <ul class="row text-left">
@@ -146,16 +155,11 @@
                             {%  endif %}
                         {% endif %}
                     {% endfor %}
-
-
                 </ul>
-
-
             </article>
-
             <div id="contacts"></div>
         </section>
-        <section id="contact"  class="container-fluid police">
+        <section id="contact"  class=" police">
 
             <h2>Horaires et Coordonnées</h2>
 
@@ -181,12 +185,16 @@
                             <li class="arial">(sauf pendant les vacances de pàques et d'été)</li>
                         </ul>
                     </li>
-                    <li class="col-lg-6 order-2"><img src="{{ asset('assets/img/vitrine2.jpg') }}" alt="" class="img-fluid"></li>
+                    <li class="col-lg-6 order-2">
+                        <img src="{{ asset('assets/img/vitrine2.jpg') }}" alt="" class="img-fluid">
+                    </li>
                 </ul>
 
             </article>
         </section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2763.880885167215!2d-1.3161059999999998!3d46.153118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4803feef4298a7e3%3A0xabdaa64f77ef7e4e!2sA+L&#39;EMPORTER!5e0!3m2!1sfr!2sfr!4v1425252032617" style="border:0; width: 100%; height: 450px;"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2763.880885167215!2d-1.3161059999999998!3d46
+        .153118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4803feef4298a7e3%3A0xabdaa64f77ef7e4e!2sA+L&#39;
+        EMPORTER!5e0!3m2!1sfr!2sfr!4v1425252032617" style="border:0; width: 100%; height: 450px;"></iframe>
     </div>
 
 
