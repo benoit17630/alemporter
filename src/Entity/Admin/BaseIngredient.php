@@ -24,10 +24,7 @@ class BaseIngredient
      */
     private $name;
 
-    /**
-     * @ORM\OneToMany(targetEntity=BasePizza::class, mappedBy="baseIngredient")
-     */
-    private $basePizzas;
+
 
     /**
      * @ORM\OneToMany(targetEntity=Pizza::class, mappedBy="baseIngredient")
