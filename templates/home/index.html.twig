@@ -31,10 +31,12 @@
                         {% if  pizza.basepizza.name()  == "tomate"%}
                             {% if pizza.isActive %}
 
-                                <li class="col-lg-6 col-12 mt-3">
+                                <li class="col-lg-6 col-12 mt-1">
                                     <ul class="row text-left">
-                                        <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
-                                        <li class="col-2 offset-4">{{ pizza.price }}€</li>
+                                        <li class="col-6">{{ pizza.name }} {% if  pizza.comment   %}
+                                            <span class="arial">({{ pizza.comment }})</span>
+                                            {% endif %} </li>
+                                        <li class="col-2 offset-4">{{ pizza.price|number_format(2) }}€</li>
                                         <li class="col-12 arial">
                                             {{ pizza.baseIngredient.name }}
 
@@ -53,6 +55,7 @@
                                             {% for legume in pizza.legume %}
                                                 {{ legume.name }}
                                             {% endfor %}
+                                            {{ pizza.lastIngredient.name }}
 
                                         </li>
                                     </ul>
@@ -83,8 +86,8 @@
                             {% if pizza.isActive %}
                                 <li class="col-lg-6 col-12 mt-3">
                                     <ul class="row text-left">
-                                        <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
-                                        <li class="col-2 offset-4">{{ pizza.price }}€</li>
+                                        <li class="col-6">{{ pizza.name }} <span class="arial">( {{ pizza.comment }} )</span> </li>
+                                        <li class="col-2 offset-4">{{ pizza.price|number_format(2) }}€</li>
                                         <li class="col-12 arial">
                                             {{ pizza.baseIngredient.name }}
 
@@ -103,6 +106,7 @@
                                             {% for legume in pizza.legume %}
                                                 {{ legume.name }}
                                             {% endfor %}
+                                            {{ pizza.lastIngredient.name }}
                                         </li>
                                     </ul>
                                 </li>
@@ -124,13 +128,13 @@
                 <ul class="col-8 row text-left">
                     {% for pizza in pizzas %}
 
-                        {% if  pizza.basepizza.name() == "les spéciales" %}
+                        {% if  pizza.basepizza.name() == "special" %}
                             {% if pizza.isActive %}
 
                                 <li class="col-lg-6 col-12 mt-3">
                                     <ul class="row text-left">
                                         <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
-                                        <li class="col-2 offset-4">{{ pizza.price }}€</li>
+                                        <li class="col-2 offset-4">{{ pizza.price|number_format(2) }}€</li>
                                         <li class="col-12 arial">
                                             {{ pizza.baseIngredient.name }}
 
@@ -149,6 +153,8 @@
                                             {% for legume in pizza.legume %}
                                                 {{ legume.name }}
                                             {% endfor %}
+                                            {{ pizza.lastIngredient.name }}
+
                                         </li>
                                     </ul>
                                 </li>
@@ -167,7 +173,7 @@
                 <ul class="row justify-content-center text-center align-items-center">
                     <li class="col-lg-3 order-1">Adresse
                         <ul class="row">
-                            <li class="col-12 arial">bis rue du 14 Juillet - Ste Marie de Ré</li>
+                            <li class="col-12 arial">62 b rue du 14 Juillet - Ste Marie de Ré</li>
                             <li class="col-12">Téléphone</li>
                             <li class="col-12 arial">05 46 45 31 60</li>
                             <li class="col-12 arial">07 88 14 24 35</li>

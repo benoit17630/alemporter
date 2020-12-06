@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LastIngredient index{% endblock %}
+
+{% block body %}
+    <div class="container police">
+    <h1 class="text-center mt-4">liste des ingredients de fin</h1>
+        <a href="{{ path('admin_last_ingredient_new') }}" class="btn btn-primary mt-4" >ajouter</a>
+    <table class="table mt-4">
+        <thead>
+            <tr>
+
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for last_ingredient in last_ingredients %}
+            <tr>
+
+                <td>{{ last_ingredient.name }}</td>
+                <td>
+
+                    <a href="{{ path('admin_last_ingredient_edit', {'id': last_ingredient.id}) }}"
+                       class="btn btn-secondary">modifier</a>
+                    <form method="post" action="{{ path('admin_last_ingredient_delete', {'id': last_ingredient.id}) }}"
+                          onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ last_ingredient.name }}?');" style="display: inline-block">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ last_ingredient.id) }}" >
+                        <button class="btn btn-danger">Suprimer</button>
+                    </form>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+
+{% endblock %}

@@ -2,18 +2,15 @@
 
 namespace App\Entity\Admin;
 
-use App\Repository\Admin\BasePizzaRepository;
+use App\Repository\Admin\LastIngredientRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass=BasePizzaRepository::class)
- * @UniqueEntity("name")
+ * @ORM\Entity(repositoryClass=LastIngredientRepository::class)
  */
-class BasePizza
+class LastIngredient
 {
     /**
      * @ORM\Id
@@ -24,29 +21,20 @@ class BasePizza
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Length(
-     *      min = 4,
-     *      max = 50,
-     *      minMessage = "au mini un mot de {{ limit }} ",
-     *      maxMessage = "ne peut pas depasser {{ limit }} lettres"
-     * )
-     * @Assert\NotBlank(message="le formulaire est vide")
      */
     private $name;
 
-
-
     /**
-     * @ORM\OneToMany(targetEntity=Pizza::class, mappedBy="basepizza")
+     * @ORM\OneToMany(targetEntity=Pizza::class, mappedBy="lastIngredient")
      */
     private $pizzas;
-
-
 
     public function __construct()
     {
         $this->pizzas = new ArrayCollection();
     }
+
+
 
     public function getId(): ?int
     {
@@ -65,8 +53,6 @@ class BasePizza
         return $this;
     }
 
-
-
     /**
      * @return Collection|Pizza[]
      */
@@ -79,7 +65,7 @@ class BasePizza
     {
         if (!$this->pizzas->contains($pizza)) {
             $this->pizzas[] = $pizza;
-            $pizza->setBasepizza($this);
+            $pizza->setLastIngredient($this);
         }
 
         return $this;
@@ -89,13 +75,15 @@ class BasePizza
     {
         if ($this->pizzas->removeElement($pizza)) {
             // set the owning side to null (unless already changed)
-            if ($pizza->getBasepizza() === $this) {
-                $pizza->setBasepizza(null);
+            if ($pizza->getLastIngredient() === $this) {
+                $pizza->setLastIngredient(null);
             }
         }
 
         return $this;
     }
+
+
 
 
 }

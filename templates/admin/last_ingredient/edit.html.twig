@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editer dernier ingredient{% endblock %}
+
+{% block body %}
+    <div class="container police">
+    <h1 class="text-center mt-4">Modifier dernier ingredient</h1>
+
+    {{ include('admin/last_ingredient/_form.html.twig', {'button_label': 'modifier'}) }}
+
+    </div>
+
+
+{% endblock %}

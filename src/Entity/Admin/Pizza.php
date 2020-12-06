@@ -86,6 +86,16 @@ class Pizza
      */
     private $isActive;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=LastIngredient::class, inversedBy="pizzas")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $lastIngredient;
+
+
+
+
+
     public function __construct()
     {
         $this->meat = new ArrayCollection();
@@ -93,6 +103,7 @@ class Pizza
         $this->legume = new ArrayCollection();
         $this->cheese = new ArrayCollection();
         $this->other = new ArrayCollection();
+
     }
 
     public function getId(): ?int
@@ -291,4 +302,22 @@ class Pizza
 
         return $this;
     }
+
+    public function getLastIngredient(): ?LastIngredient
+    {
+        return $this->lastIngredient;
+    }
+
+    public function setLastIngredient(?LastIngredient $lastIngredient): self
+    {
+        $this->lastIngredient = $lastIngredient;
+
+        return $this;
+    }
+
+
+
+
+
+
 }

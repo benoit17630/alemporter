@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+{{ form_errors(form) }}
+<div class="container ">
+    <div class="row police justify-content-center mt-4">
+        <div class="col-3">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+        </div>
+        {{ form_widget(form) }}
+        <button class="btn btn-primary mt-4">{{ button_label|default('sauvegarder') }}</button>
+    </div>
+    {{ form_end(form) }}

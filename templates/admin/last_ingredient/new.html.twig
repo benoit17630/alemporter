@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New LastIngredient{% endblock %}
+
+{% block body %}
+    <div class="container police">
+    <h1 class="text-center mt-4">ajouter un dernier ingredient</h1>
+
+    {{ include('admin/last_ingredient/_form.html.twig') }}
+    </div>
+
+{% endblock %}

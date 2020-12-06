@@ -23,7 +23,7 @@ class PizzaController extends AbstractController
     public function index(PizzaRepository $pizzaRepository): Response
     {
         return $this->render('admin/pizza/index.html.twig', [
-            'pizzas' => $pizzaRepository->findAll(),
+            'pizzas' => $pizzaRepository->findBy([],["basepizza"=>'ASC']),
         ]);
     }
 

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Liste des Pizzas{% endblock %}
+{% block title %}Liste des Pizzas {% endblock %}
 
 {% block body %}
     <div class="container police ">
@@ -12,7 +12,7 @@
 
                 <th class="">Nom</th>
                 <th class="">Base</th>
-                <th class="">Prix</th>
+                <th class="d-none d-md-block">Prix</th>
                 <th class="">Actions</th>
 
             </tr>
@@ -23,7 +23,7 @@
 
                 <td class="">{{ pizza.name }}</td>
                 <td class="">{{ pizza.basepizza.name }}</td>
-                <td class="">{{ pizza.price }}</td>
+                <td class="d-none d-md-block">{{ pizza.price|number_format(2) }}</td>
                 <td class="">
 
                     <a href="{{ path('admin_pizza_edit', {'id': pizza.id}) }}" class="btn btn-secondary">modifier</a>

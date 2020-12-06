@@ -25,7 +25,7 @@ class Legume
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Length(
-     *      min = "4",
+     *      min = 4,
      *      max = 50,
      *      minMessage = "au mini un mot de {{ limit }} ",
      *      maxMessage = "ne peut pas depasser {{ limit }} lettres"

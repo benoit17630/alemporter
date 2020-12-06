@@ -6,6 +6,7 @@ use App\Entity\Admin\BaseIngredient;
 use App\Entity\Admin\BasePizza;
 use App\Entity\Admin\Cheese;
 use App\Entity\Admin\Fish;
+use App\Entity\Admin\LastIngredient;
 use App\Entity\Admin\Legume;
 use App\Entity\Admin\Meat;
 use App\Entity\Admin\Other;
@@ -43,14 +44,18 @@ class PizzaType extends AbstractType
                     'label'=>'choix du premier ingredient :'
             ])
 
+            ->add('lastIngredient',EntityType::class,[
+                'class'=>LastIngredient::class,
+                "choice_label"=>'name',
+                'label'=>'choix du dernier ingredient :'
+            ])
+
             ->add('meat',EntityType::class,[
                 'class'=>Meat::class,
                 'choice_label'=> 'name',
                 'multiple'=> true,
                 'label'=> 'viande :',
                 'required'=>false,
-
-
             ])
 
             ->add('fish',EntityType::class,[
