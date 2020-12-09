@@ -43,7 +43,7 @@ class OpeningTimeController extends AbstractController
             $entityManager->persist($openingTime);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_opening_time_index');
         }
 
         return $this->render('admin/opening_time/new.html.twig', [
@@ -67,7 +67,7 @@ class OpeningTimeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_opening_time_index');
         }
 
         return $this->render('admin/opening_time/edit.html.twig', [
@@ -90,6 +90,6 @@ class OpeningTimeController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_home');
+        return $this->redirectToRoute('admin_opening_time_index');
     }
 }

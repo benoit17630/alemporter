@@ -39,7 +39,7 @@ class CheeseController extends AbstractController
             $entityManager->persist($cheese);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_cheese_index');
         }
 
         return $this->render('admin/cheese/new.html.twig', [
@@ -61,7 +61,7 @@ class CheeseController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_cheese_index');
         }
 
         return $this->render('admin/cheese/edit.html.twig', [
@@ -81,6 +81,6 @@ class CheeseController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_home');
+        return $this->redirectToRoute('admin_cheese_index');
     }
 }

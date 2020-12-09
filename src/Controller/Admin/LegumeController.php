@@ -39,7 +39,7 @@ class LegumeController extends AbstractController
             $entityManager->persist($legume);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_legume_index');
         }
 
         return $this->render('admin/legume/new.html.twig', [
@@ -61,7 +61,7 @@ class LegumeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_legume_index');
         }
 
         return $this->render('admin/legume/edit.html.twig', [
@@ -81,6 +81,6 @@ class LegumeController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_home');
+        return $this->redirectToRoute('admin_legume_index');
     }
 }

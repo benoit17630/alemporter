@@ -39,7 +39,7 @@ class MeatController extends AbstractController
             $entityManager->persist($meat);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_meat_index');
         }
 
         return $this->render('admin/meat/new.html.twig', [
@@ -61,7 +61,7 @@ class MeatController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_meat_index');
         }
 
         return $this->render('admin/meat/edit.html.twig', [
@@ -81,6 +81,6 @@ class MeatController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_home');
+        return $this->redirectToRoute('admin_meat_index');
     }
 }

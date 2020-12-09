@@ -39,7 +39,7 @@ class BaseIngredientController extends AbstractController
             $entityManager->persist($baseIngredient);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_base_ingredient_index');
         }
 
         return $this->render('admin/base_ingredient/new.html.twig', [
@@ -80,6 +80,6 @@ class BaseIngredientController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_home');
+        return $this->redirectToRoute('admin_base_ingredient_index');
     }
 }

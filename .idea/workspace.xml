@@ -20,77 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="ajout de la categorie divers">
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/LastIngredientController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/LastIngredient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Admin/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Admin/LastIngredientType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/LastIngredientRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/Admin/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/UserAuthenticator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/last_ingredient/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/last_ingredient/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/last_ingredient/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/last_ingredient/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ALEmporter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ALEmporter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202110125.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202110618.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202111140.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202125847.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202131057.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202132739.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202134330.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202135132.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202141402.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201206155040.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202145629.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202150831.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202152709.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202153745.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202164646.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201203155443.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PizzaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/BasePizza.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/BasePizza.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/Legume.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/Legume.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/Pizza.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/Pizza.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Admin/BasePizzaType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Admin/BasePizzaType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Admin/PizzaType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Admin/PizzaType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/admin_home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin_home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base_ingredient/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_ingredient/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base_ingredient/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_ingredient/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base_ingredient/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_ingredient/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base_pizza/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_pizza/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base_pizza/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_pizza/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base_pizza/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_pizza/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/cheese/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/cheese/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/cheese/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/cheese/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/cheese/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/cheese/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/fish/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/fish/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/fish/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/fish/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/fish/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/fish/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/legume/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/legume/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/legume/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/legume/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/legume/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/legume/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/meat/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/meat/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/opening_time/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/opening_time/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/opening_time/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/opening_time/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/other/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/other/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/other/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/other/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/pizza/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/pizza/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/pizza/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/pizza/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/pizza/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/pizza/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/pizza/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/pizza/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/LastIngredient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/LastIngredient.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +190,8 @@
       <workItem from="1607172008181" duration="3060000" />
       <workItem from="1607183990342" duration="8705000" />
       <workItem from="1607254767798" duration="1908000" />
-      <workItem from="1607258427610" duration="17843000" />
+      <workItem from="1607258427610" duration="18545000" />
+      <workItem from="1607329567312" duration="655000" />
     </task>
     <task id="LOCAL-00001" summary="creation">
       <created>1606905635479</created>
@@ -344,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607192124725</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ajout de la categorie divers">
+      <created>1607276732782</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607276732782</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,10 +334,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607078997214" />
-    <state x="553" y="273" key="Vcs.Push.Dialog.v2" timestamp="1607192125533">
+    <state x="553" y="273" key="Vcs.Push.Dialog.v2" timestamp="1607276750911">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="553" y="273" key="Vcs.Push.Dialog.v2/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607192125533" />
+    <state x="553" y="273" key="Vcs.Push.Dialog.v2/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607276750911" />
     <state x="618" y="253" key="run.anything.popup" timestamp="1606919150592">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

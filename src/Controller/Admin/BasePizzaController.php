@@ -39,7 +39,7 @@ class BasePizzaController extends AbstractController
             $entityManager->persist($basePizza);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_base_pizza_index');
         }
 
         return $this->render('admin/base_pizza/new.html.twig', [
@@ -61,7 +61,7 @@ class BasePizzaController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_base_pizza_index');
         }
 
         return $this->render('admin/base_pizza/edit.html.twig', [
@@ -81,6 +81,6 @@ class BasePizzaController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_home');
+        return $this->redirectToRoute('admin_base_pizza_index');
     }
 }

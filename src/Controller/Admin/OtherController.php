@@ -39,7 +39,7 @@ class OtherController extends AbstractController
             $entityManager->persist($other);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_other_index');
         }
 
         return $this->render('admin/other/new.html.twig', [
@@ -61,7 +61,7 @@ class OtherController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_other_index');
         }
 
         return $this->render('admin/other/edit.html.twig', [
@@ -81,6 +81,6 @@ class OtherController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_home');
+        return $this->redirectToRoute('admin_other_index');
     }
 }

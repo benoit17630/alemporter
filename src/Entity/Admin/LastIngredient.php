@@ -6,6 +6,7 @@ use App\Repository\Admin\LastIngredientRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=LastIngredientRepository::class)
@@ -21,6 +22,13 @@ class LastIngredient
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *      min = "4",
+     *      max = 50,
+     *      minMessage = "au mini un mot de {{ limit }} ",
+     *      maxMessage = "ne peut pas depasser {{ limit }} lettres"
+     * )
+     * @Assert\NotBlank(message="le formulaire est vide")
      */
     private $name;
 
