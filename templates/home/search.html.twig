@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+{% block title %} Votre recherche {% endblock %}
+{% block body %}
+    <div class="container-fluid police">
+        <article class="row justify-content-around text-center align-items-center">
+            {% for meat in meats %}
+
+                {% for pizza in meat.pizzas %}
+
+
+                    <ul class="col-8 row text-left mt-4">
+                    <li class="col-lg-12 col-12 mt-3">
+
+                    <ul class="row text-left  mt-4">
+                    <li class="col-6 police">{{ pizza.name }} <span class="arial">{{ pizza.comment }}</span> </li>
+                    <li class="col-2 offset-4 police">{{ pizza.price|number_format(2) }}€</li>
+                    <li class="col-12 arial">
+                    {{ pizza.baseIngredient.name }}
+
+                    {% for meat in pizza.meat %}
+                        {{ meat.name }}
+                    {% endfor %}
+                    {% for fish in pizza.fish %}
+                        {{ fish.name }}
+                    {% endfor %}
+                    {% for other in pizza.other %}
+                        {{ other.name }}
+                    {% endfor %}
+                    {% for cheese in pizza.cheese %}
+                        {{ cheese.name }}
+                    {% endfor %}
+                    {% for legume in pizza.legume %}
+                        {{ legume.name }}
+                    {% endfor %}
+                    {{ pizza.lastIngredient.name }}
+                {% endfor %}
+
+                </li>
+                </ul>
+                </li>
+                </ul>
+            {% endfor %}
+            {% for legume in legumes %}
+
+            {% for pizza in legume.pizzas %}
+
+            <ul class="row text-left  mt-4">
+                <li class="col-6 police">{{ pizza.name }} <span class="arial">{{ pizza.comment }}</span> </li>
+                <li class="col-2 offset-4 police">{{ pizza.price|number_format(2) }}€</li>
+                <li class="col-12 arial">
+                    {{ pizza.baseIngredient.name }}
+
+                    {% for meat in pizza.meat %}
+                        {{ meat.name }}
+                    {% endfor %}
+                    {% for fish in pizza.fish %}
+                        {{ fish.name }}
+                    {% endfor %}
+                    {% for other in pizza.other %}
+                        {{ other.name }}
+                    {% endfor %}
+                    {% for cheese in pizza.cheese %}
+                        {{ cheese.name }}
+                    {% endfor %}
+                    {% for legume in pizza.legume %}
+                        {{ legume.name }}
+                    {% endfor %}
+                    {{ pizza.lastIngredient.name }}
+                    {% endfor %}
+                    {% endfor %}
+                </li>
+            </ul>
+            {% for cheese in cheeses %}
+
+            {% for pizza in cheese.pizzas %}
+
+            <ul class="row text-left  mt-4">
+                <li class="col-6 police">{{ pizza.name }} <span class="arial">{{ pizza.comment }}</span> </li>
+                <li class="col-2 offset-4 police">{{ pizza.price|number_format(2) }}€</li>
+                <li class="col-12 arial">
+                    {{ pizza.baseIngredient.name }}
+
+                    {% for meat in pizza.meat %}
+                        {{ meat.name }}
+                    {% endfor %}
+                    {% for fish in pizza.fish %}
+                        {{ fish.name }}
+                    {% endfor %}
+                    {% for other in pizza.other %}
+                        {{ other.name }}
+                    {% endfor %}
+                    {% for cheese in pizza.cheese %}
+                        {{ cheese.name }}
+                    {% endfor %}
+                    {% for legume in pizza.legume %}
+                        {{ legume.name }}
+                    {% endfor %}
+                    {{ pizza.lastIngredient.name }}
+                    {% endfor %}
+                    {% endfor %}
+                </li>
+            </ul>
+
+        </article>
+    </div>
+{% endblock %}
+
+
+

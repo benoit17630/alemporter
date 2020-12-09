@@ -19,10 +19,6 @@ class PizzaRepository extends ServiceEntityRepository
         parent::__construct($registry, Pizza::class);
     }
 
-
-
-
-
     // /**
     //  * @return Pizza[] Returns an array of Pizza objects
     //  */

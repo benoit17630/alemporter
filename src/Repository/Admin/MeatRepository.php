@@ -19,6 +19,17 @@ class MeatRepository extends ServiceEntityRepository
         parent::__construct($registry, Meat::class);
     }
 
+    public function searchByMeat($search)
+    {
+        return $this->createQueryBuilder('m')
+
+            ->orWhere('m.name like :search')
+            ->setParameter('search', $search)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Meat[] Returns an array of Meat objects
     //  */

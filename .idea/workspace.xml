@@ -21,8 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="ajout de la categorie divers">
       <change afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/search.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Admin/LastIngredient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Admin/LastIngredient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/Admin/CheeseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Admin/CheeseRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/Admin/LegumeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Admin/LegumeRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/Admin/MeatRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Admin/MeatRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/Admin/PizzaRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Admin/PizzaRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +199,7 @@
       <workItem from="1607254767798" duration="1908000" />
       <workItem from="1607258427610" duration="18545000" />
       <workItem from="1607329567312" duration="655000" />
+      <workItem from="1607503721638" duration="11642000" />
     </task>
     <task id="LOCAL-00001" summary="creation">
       <created>1606905635479</created>
@@ -284,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607276732782</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="modification des redirections">
+      <created>1607504206694</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607504206694</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,36 +326,7 @@
     <MESSAGE value="ajout legume" />
     <MESSAGE value="ajout des fromages" />
     <MESSAGE value="ajout de la categorie divers" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout de la categorie divers" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="180" key="#Plugins" timestamp="1607258511266">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="552" y="180" key="#Plugins/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607258511266" />
-    <state x="415" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607257480193">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="415" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607257480193" />
-    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607270581795">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607270581795" />
-    <state x="733" y="262" key="NewPhpClassDialog" timestamp="1607270470725">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="733" y="262" key="NewPhpClassDialog/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607270470725" />
-    <state x="461" y="184" key="SettingsEditor" timestamp="1607078997214">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="461" y="184" key="SettingsEditor/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607078997214" />
-    <state x="553" y="273" key="Vcs.Push.Dialog.v2" timestamp="1607276750911">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="553" y="273" key="Vcs.Push.Dialog.v2/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1607276750911" />
-    <state x="618" y="253" key="run.anything.popup" timestamp="1606919150592">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="618" y="253" key="run.anything.popup/3840.540.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606919150592" />
+    <MESSAGE value="modification des redirections" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification des redirections" />
   </component>
 </project>

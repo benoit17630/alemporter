@@ -19,6 +19,17 @@ class CheeseRepository extends ServiceEntityRepository
         parent::__construct($registry, Cheese::class);
     }
 
+    public function searchByCheese($search)
+    {
+        return $this->createQueryBuilder('c')
+
+            ->orWhere('c.name like :search')
+            ->setParameter('search', $search)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Cheese[] Returns an array of Cheese objects
     //  */

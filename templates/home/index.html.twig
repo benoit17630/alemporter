@@ -86,7 +86,9 @@
                             {% if pizza.isActive %}
                                 <li class="col-lg-6 col-12 mt-3">
                                     <ul class="row text-left">
-                                        <li class="col-6">{{ pizza.name }} <span class="arial">( {{ pizza.comment }} )</span> </li>
+                                        <li class="col-6">{{ pizza.name }} {% if  pizza.comment   %}
+                                                <span class="arial">({{ pizza.comment }})</span>
+                                            {% endif %} </li>
                                         <li class="col-2 offset-4">{{ pizza.price|number_format(2) }}€</li>
                                         <li class="col-12 arial">
                                             {{ pizza.baseIngredient.name }}
@@ -133,7 +135,9 @@
 
                                 <li class="col-lg-6 col-12 mt-3">
                                     <ul class="row text-left">
-                                        <li class="col-6">{{ pizza.name }} <span>{{ pizza.comment }}</span> </li>
+                                        <li class="col-6">{{ pizza.name }} {% if  pizza.comment   %}
+                                                <span class="arial">({{ pizza.comment }})</span>
+                                            {% endif %} </li>
                                         <li class="col-2 offset-4">{{ pizza.price|number_format(2) }}€</li>
                                         <li class="col-12 arial">
                                             {{ pizza.baseIngredient.name }}
