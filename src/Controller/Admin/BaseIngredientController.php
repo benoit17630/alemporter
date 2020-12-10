@@ -17,6 +17,8 @@ class BaseIngredientController extends AbstractController
 {
     /**
      * @Route("/", name="admin_base_ingredient_index", methods={"GET"})
+     * @param BaseIngredientRepository $baseIngredientRepository
+     * @return Response
      */
     public function index(BaseIngredientRepository $baseIngredientRepository): Response
     {
@@ -27,6 +29,8 @@ class BaseIngredientController extends AbstractController
 
     /**
      * @Route("/new", name="admin_base_ingredient_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -51,6 +55,9 @@ class BaseIngredientController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="admin_base_ingredient_edit", methods={"GET","POST"})
+     * @param Request $request
+     * @param BaseIngredient $baseIngredient
+     * @return Response
      */
     public function edit(Request $request, BaseIngredient $baseIngredient): Response
     {
@@ -60,7 +67,7 @@ class BaseIngredientController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_base_ingredient_index');
         }
 
         return $this->render('admin/base_ingredient/edit.html.twig', [
@@ -71,6 +78,9 @@ class BaseIngredientController extends AbstractController
 
     /**
      * @Route("/{id}", name="admin_base_ingredient_delete", methods={"DELETE"})
+     * @param Request $request
+     * @param BaseIngredient $baseIngredient
+     * @return Response
      */
     public function delete(Request $request, BaseIngredient $baseIngredient): Response
     {

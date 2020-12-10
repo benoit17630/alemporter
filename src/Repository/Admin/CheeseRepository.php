@@ -24,7 +24,7 @@ class CheeseRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('c')
 
             ->orWhere('c.name like :search')
-            ->setParameter('search', $search)
+            ->setParameter('search','%'. $search.'%')
             ->getQuery()
             ->getResult()
             ;

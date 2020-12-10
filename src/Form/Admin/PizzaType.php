@@ -56,6 +56,7 @@ class PizzaType extends AbstractType
                 'multiple'=> true,
                 'label'=> 'viande :',
                 'required'=>false,
+
             ])
 
             ->add('fish',EntityType::class,[
@@ -90,10 +91,9 @@ class PizzaType extends AbstractType
                 'choice_label'=>'name',
                 'multiple'=> true,
                 'label'=> 'autres :',
-                'required'=>false,
-
-
+                'required'=>false
             ])
+
             ->add("isActive", null,[
                 'label'=>"a afficher"
             ])

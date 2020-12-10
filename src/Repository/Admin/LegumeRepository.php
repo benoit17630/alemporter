@@ -24,7 +24,7 @@ class LegumeRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('l')
 
             ->orWhere('l.name like :search')
-            ->setParameter('search', $search)
+            ->setParameter('search','%'. $search.'%')
             ->getQuery()
             ->getResult()
             ;

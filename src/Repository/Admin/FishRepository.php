@@ -19,6 +19,17 @@ class FishRepository extends ServiceEntityRepository
         parent::__construct($registry, Fish::class);
     }
 
+    public function searchByFish($search)
+    {
+        return $this->createQueryBuilder('f')
+
+            ->orWhere('f.name like :search')
+            ->setParameter('search','%'. $search.'%')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Fish[] Returns an array of Fish objects
     //  */

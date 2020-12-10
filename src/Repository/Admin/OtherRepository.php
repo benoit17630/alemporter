@@ -19,6 +19,17 @@ class OtherRepository extends ServiceEntityRepository
         parent::__construct($registry, Other::class);
     }
 
+    public function searchByOther($search)
+    {
+        return $this->createQueryBuilder('o')
+
+            ->orWhere('o.name like :search')
+            ->setParameter('search','%'. $search.'%')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Other[] Returns an array of Other objects
     //  */

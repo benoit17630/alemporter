@@ -24,7 +24,7 @@ class MeatRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('m')
 
             ->orWhere('m.name like :search')
-            ->setParameter('search', $search)
+            ->setParameter('search','%'. $search.'%')
             ->getQuery()
             ->getResult()
             ;

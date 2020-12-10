@@ -17,7 +17,7 @@
                 <em>A découvrir aussi, nos salades de saison, desserts maison et boissons...</em></p>
         </div>
         <div class="intersection mb-5" id="basetomate"></div>
-        <section  class="container-fluid police">
+        <section  class="police">
 
             <h2>Nos Pizzas Base Tomate</h2>
 
@@ -30,11 +30,10 @@
                     {% for pizza in pizzas %}
                         {% if  pizza.basepizza.name()  == "tomate"%}
                             {% if pizza.isActive %}
-
-                                <li class="col-lg-6 col-12 mt-1">
+                                <li class="col-lg-6 col-12 mt-3">
                                     <ul class="row text-left">
                                         <li class="col-6">{{ pizza.name }} {% if  pizza.comment   %}
-                                            <span class="arial">({{ pizza.comment }})</span>
+                                                <span class="arial">({{ pizza.comment }})</span>
                                             {% endif %} </li>
                                         <li class="col-2 offset-4">{{ pizza.price|number_format(2) }}€</li>
                                         <li class="col-12 arial">
@@ -56,11 +55,10 @@
                                                 {{ legume.name }}
                                             {% endfor %}
                                             {{ pizza.lastIngredient.name }}
-
                                         </li>
                                     </ul>
                                 </li>
-                            {% endif %}
+                            {%  endif %}
                         {% endif %}
                     {% endfor %}
 
@@ -122,7 +120,7 @@
             </article>
         </section>
 
-        <section id="special" class="container-fluid police">
+        <section id="special" class="police">
 
             <h2>Nos Pizzas Spéciales</h2>
 
@@ -175,7 +173,7 @@
 
             <article class="container ">
                 <ul class="row justify-content-center text-center align-items-center">
-                    <li class="col-lg-3 order-1">Adresse
+                    <li class="col-lg-3 order-1 mb-3">Adresse
                         <ul class="row">
                             <li class="col-12 arial">62 b rue du 14 Juillet - Ste Marie de Ré</li>
                             <li class="col-12">Téléphone</li>
@@ -183,7 +181,7 @@
                             <li class="col-12 arial">07 88 14 24 35</li>
                         </ul>
                     </li>
-                    <li class="col-lg-3 order-3">Ouvert toute l'année
+                    <li class="col-lg-3 order-3 mt-3">Ouvert toute l'année
                         <ul>
                             <li>{% for horaire in horaires %}
                                     {% if horaire.isActive %}
@@ -195,7 +193,7 @@
                             <li class="arial">(sauf pendant les vacances de pàques et d'été)</li>
                         </ul>
                     </li>
-                    <li class="col-lg-6 order-2">
+                    <li class="col-lg-6 order-2 ">
                         <img src="{{ asset('assets/img/vitrine2.jpg') }}" alt="" class="img-fluid">
                     </li>
                 </ul>

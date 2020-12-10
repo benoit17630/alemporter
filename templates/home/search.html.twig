@@ -1,107 +1,208 @@
 {% extends 'base.html.twig' %}
 {% block title %} Votre recherche {% endblock %}
 {% block body %}
+
     <div class="container-fluid police">
-        <article class="row justify-content-around text-center align-items-center">
-            {% for meat in meats %}
+        {% if meats %}
+            <article class="row justify-content-around text-center align-items-center">
 
-                {% for pizza in meat.pizzas %}
-
-
-                    <ul class="col-8 row text-left mt-4">
+                <ul class="col-8 row text-left mt-4">
+                    {% for meat in meats %}
+                    {% for pizza in meat.pizzas %}
                     <li class="col-lg-12 col-12 mt-3">
 
-                    <ul class="row text-left  mt-4">
-                    <li class="col-6 police">{{ pizza.name }} <span class="arial">{{ pizza.comment }}</span> </li>
-                    <li class="col-2 offset-4 police">{{ pizza.price|number_format(2) }}€</li>
-                    <li class="col-12 arial">
-                    {{ pizza.baseIngredient.name }}
+                        <ul class="row text-left  mt-4">
+                            <li class="col-6 police">{{ pizza.name }} <span class="arial">{{ pizza.comment }}</span> </li>
+                            <li class="col-2 offset-4 police">{{ pizza.price|number_format(2) }}€</li>
+                            <li class="col-12 arial">
+                                {{ pizza.baseIngredient.name }}
 
-                    {% for meat in pizza.meat %}
-                        {{ meat.name }}
-                    {% endfor %}
-                    {% for fish in pizza.fish %}
-                        {{ fish.name }}
-                    {% endfor %}
-                    {% for other in pizza.other %}
-                        {{ other.name }}
-                    {% endfor %}
-                    {% for cheese in pizza.cheese %}
-                        {{ cheese.name }}
-                    {% endfor %}
-                    {% for legume in pizza.legume %}
-                        {{ legume.name }}
-                    {% endfor %}
-                    {{ pizza.lastIngredient.name }}
+                                {% for meat in pizza.meat %}
+                                    {{ meat.name }}
+                                {% endfor %}
+                                {% for fish in pizza.fish %}
+                                    {{ fish.name }}
+                                {% endfor %}
+                                {% for other in pizza.other %}
+                                    {{ other.name }}
+                                {% endfor %}
+                                {% for cheese in pizza.cheese %}
+                                    {{ cheese.name }}
+                                {% endfor %}
+                                {% for legume in pizza.legume %}
+                                    {{ legume.name }}
+                                {% endfor %}
+                                {{ pizza.lastIngredient.name }}
+                                {% endfor %}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
                 {% endfor %}
 
-                </li>
+            </article>
+        {% endif %}
+        {% if legumes %}
+
+
+            <article class="row justify-content-around text-center align-items-center">
+                <ul class="col-8 row text-left mt-4">
+                    {% for legume in legumes %}
+
+                    {% for pizza in legume.pizzas %}
+
+                    <li class="col-lg-12 col-12 mt-3">
+                        <ul class="row text-left  mt-4">
+                            <li class="col-6 police">{{ pizza.name }} <span class="arial">{{ pizza.comment }}</span> </li>
+                            <li class="col-2 offset-4 police">{{ pizza.price|number_format(2) }}€</li>
+                            <li class="col-12 arial">
+                                {{ pizza.baseIngredient.name }}
+
+                                {% for meat in pizza.meat %}
+                                    {{ meat.name }}
+                                {% endfor %}
+                                {% for fish in pizza.fish %}
+                                    {{ fish.name }}
+                                {% endfor %}
+                                {% for other in pizza.other %}
+                                    {{ other.name }}
+                                {% endfor %}
+                                {% for cheese in pizza.cheese %}
+                                    {{ cheese.name }}
+                                {% endfor %}
+                                {% for legume in pizza.legume %}
+                                    {{ legume.name }}
+                                {% endfor %}
+                                {{ pizza.lastIngredient.name }}
+                                {% endfor %}
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
-                </li>
+                {% endfor %}
+
+            </article>
+        {% endif %}
+        {% if cheeses %}
+
+
+            <article class="row justify-content-around text-center align-items-center">
+                <ul class="col-8 row text-left mt-4">
+                    {% for cheese in cheeses %}
+
+                    {% for pizza in cheese.pizzas %}
+                    <li class="col-lg-12 col-12 mt-3">
+
+                        <ul class="row text-left  mt-4">
+                            <li class="col-6 police">{{ pizza.name }} <span class="arial">{{ pizza.comment }}</span> </li>
+                            <li class="col-2 offset-4 police">{{ pizza.price|number_format(2) }}€</li>
+                            <li class="col-12 arial">
+                                {{ pizza.baseIngredient.name }}
+
+                                {% for meat in pizza.meat %}
+                                    {{ meat.name }}
+                                {% endfor %}
+                                {% for fish in pizza.fish %}
+                                    {{ fish.name }}
+                                {% endfor %}
+                                {% for other in pizza.other %}
+                                    {{ other.name }}
+                                {% endfor %}
+                                {% for cheese in pizza.cheese %}
+                                    {{ cheese.name }}
+                                {% endfor %}
+                                {% for legume in pizza.legume %}
+                                    {{ legume.name }}
+                                {% endfor %}
+                                {{ pizza.lastIngredient.name }}
+                                {% endfor %}
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
-            {% endfor %}
-            {% for legume in legumes %}
+                {% endfor %}
+            </article>
+        {% endif %}
+        {% if fishs %}
 
-            {% for pizza in legume.pizzas %}
 
-            <ul class="row text-left  mt-4">
-                <li class="col-6 police">{{ pizza.name }} <span class="arial">{{ pizza.comment }}</span> </li>
-                <li class="col-2 offset-4 police">{{ pizza.price|number_format(2) }}€</li>
-                <li class="col-12 arial">
-                    {{ pizza.baseIngredient.name }}
+            <article class="row justify-content-around text-center align-items-center">
+                <ul class="col-8 row text-left mt-4">
+                    {% for fish in fishs %}
 
-                    {% for meat in pizza.meat %}
-                        {{ meat.name }}
-                    {% endfor %}
-                    {% for fish in pizza.fish %}
-                        {{ fish.name }}
-                    {% endfor %}
-                    {% for other in pizza.other %}
-                        {{ other.name }}
-                    {% endfor %}
-                    {% for cheese in pizza.cheese %}
-                        {{ cheese.name }}
-                    {% endfor %}
-                    {% for legume in pizza.legume %}
-                        {{ legume.name }}
-                    {% endfor %}
-                    {{ pizza.lastIngredient.name }}
-                    {% endfor %}
-                    {% endfor %}
-                </li>
-            </ul>
-            {% for cheese in cheeses %}
+                    {% for pizza in fish.pizzas %}
+                    <li class="col-lg-12 col-12 mt-3">
 
-            {% for pizza in cheese.pizzas %}
+                        <ul class="row text-left  mt-4">
+                            <li class="col-6 police">{{ pizza.name }} <span class="arial">{{ pizza.comment }}</span> </li>
+                            <li class="col-2 offset-4 police">{{ pizza.price|number_format(2) }}€</li>
+                            <li class="col-12 arial">
+                                {{ pizza.baseIngredient.name }}
 
-            <ul class="row text-left  mt-4">
-                <li class="col-6 police">{{ pizza.name }} <span class="arial">{{ pizza.comment }}</span> </li>
-                <li class="col-2 offset-4 police">{{ pizza.price|number_format(2) }}€</li>
-                <li class="col-12 arial">
-                    {{ pizza.baseIngredient.name }}
+                                {% for meat in pizza.meat %}
+                                    {{ meat.name }}
+                                {% endfor %}
+                                {% for fish in pizza.fish %}
+                                    {{ fish.name }}
+                                {% endfor %}
+                                {% for other in pizza.other %}
+                                    {{ other.name }}
+                                {% endfor %}
+                                {% for cheese in pizza.cheese %}
+                                    {{ cheese.name }}
+                                {% endfor %}
+                                {% for legume in pizza.legume %}
+                                    {{ legume.name }}
+                                {% endfor %}
+                                {{ pizza.lastIngredient.name }}
+                                {% endfor %}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                {% endfor %}
+            </article>
+        {% endif %}
+        {% if others %}
 
-                    {% for meat in pizza.meat %}
-                        {{ meat.name }}
-                    {% endfor %}
-                    {% for fish in pizza.fish %}
-                        {{ fish.name }}
-                    {% endfor %}
-                    {% for other in pizza.other %}
-                        {{ other.name }}
-                    {% endfor %}
-                    {% for cheese in pizza.cheese %}
-                        {{ cheese.name }}
-                    {% endfor %}
-                    {% for legume in pizza.legume %}
-                        {{ legume.name }}
-                    {% endfor %}
-                    {{ pizza.lastIngredient.name }}
-                    {% endfor %}
-                    {% endfor %}
-                </li>
-            </ul>
 
-        </article>
+            <article class="row justify-content-around text-center align-items-center">
+                <ul class="col-8 row text-left mt-4">
+                    {% for other in others %}
+
+                    {% for pizza in other.pizzas %}
+                    <li class="col-lg-12 col-12 mt-3">
+
+                        <ul class="row text-left  mt-4">
+                            <li class="col-6 police">{{ pizza.name }} <span class="arial">{{ pizza.comment }}</span> </li>
+                            <li class="col-2 offset-4 police">{{ pizza.price|number_format(2) }}€</li>
+                            <li class="col-12 arial">
+                                {{ pizza.baseIngredient.name }}
+
+                                {% for meat in pizza.meat %}
+                                    {{ meat.name }}
+                                {% endfor %}
+                                {% for fish in pizza.fish %}
+                                    {{ fish.name }}
+                                {% endfor %}
+                                {% for other in pizza.other %}
+                                    {{ other.name }}
+                                {% endfor %}
+                                {% for cheese in pizza.cheese %}
+                                    {{ cheese.name }}
+                                {% endfor %}
+                                {% for legume in pizza.legume %}
+                                    {{ legume.name }}
+                                {% endfor %}
+                                {{ pizza.lastIngredient.name }}
+                                {% endfor %}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                {% endfor %}
+            </article>
+        {% endif %}
     </div>
 {% endblock %}
 

@@ -4,9 +4,11 @@ namespace App\Controller;
 
 
 use App\Repository\Admin\CheeseRepository;
+use App\Repository\Admin\FishRepository;
 use App\Repository\Admin\LegumeRepository;
 use App\Repository\Admin\MeatRepository;
 use App\Repository\Admin\OpeningTimeRepository;
+use App\Repository\Admin\OtherRepository;
 use App\Repository\Admin\PizzaRepository;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -24,6 +26,8 @@ class HomeController extends AbstractController
      * @param MeatRepository $meatRepository
      * @param LegumeRepository $legumeRepository
      * @param CheeseRepository $cheeseRepository
+     * @param FishRepository $fishRepository
+     * @param OtherRepository $otherRepository
      * @return Response
      */
     public function index(PizzaRepository $pizzaRepository,
@@ -31,7 +35,9 @@ class HomeController extends AbstractController
                           Request $request,
                           MeatRepository $meatRepository,
                           LegumeRepository $legumeRepository,
-                          CheeseRepository $cheeseRepository): Response
+                          CheeseRepository $cheeseRepository,
+                          FishRepository $fishRepository,
+                          OtherRepository $otherRepository): Response
     {
 
         $horaires =$timeRepository->findAll();
@@ -45,14 +51,21 @@ class HomeController extends AbstractController
             $meats = $meatRepository->searchByMeat($search);
             $legumes = $legumeRepository->searchByLegume($search);
             $cheeses = $cheeseRepository->searchByCheese($search);
+            $fishs = $fishRepository->searchByFish($search);
+            $others = $otherRepository->searchByOther($search);
 
             return $this->render("home/search.html.twig",[
                     'meats' => $meats,
                     'legumes' => $legumes,
-                    'cheeses' => $cheeses
+                    'cheeses' => $cheeses,
+                    'fishs' => $fishs,
+                    'others' => $others,
+
                 ]
             );
         }
+
+
 
         return $this->render('home/index.html.twig', [
             'pizzas'=> $pizzas,
