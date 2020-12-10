@@ -44,8 +44,8 @@ class HomeController extends AbstractController
         $pizzas = $pizzaRepository->findBy( [], ["price"=>"asc"]);
 
         $search = $request->query->get('search');
-
-        if (!is_null($search)) {
+        //si $search n est pas vide je peut faire ma recherche sinon je rend ma vue
+        if ( !empty($search) ) {
 
             // j'appelle ma requête personalisée de repository
             $meats = $meatRepository->searchByMeat($search);
@@ -66,12 +66,12 @@ class HomeController extends AbstractController
         }
 
 
-
         return $this->render('home/index.html.twig', [
             'pizzas'=> $pizzas,
             'horaires'=> $horaires,
 
         ]);
+
     }
 
 

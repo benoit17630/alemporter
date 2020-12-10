@@ -23,7 +23,7 @@ class PizzaController extends AbstractController
     public function index(PizzaRepository $pizzaRepository): Response
     {
         return $this->render('admin/pizza/index.html.twig', [
-            'pizzas' => $pizzaRepository->findBy([],["basepizza"=>'ASC']),
+            'pizzas' => $pizzaRepository->findBy([],["basepizza"=>'ASC',"price"=>'ASC']),
         ]);
     }
 
@@ -92,5 +92,44 @@ class PizzaController extends AbstractController
         }
 
         return $this->redirectToRoute('admin_pizza_index');
+    }
+
+    /**
+     * @Route ("/tomate/index", name="admin_tomate_index")
+     * @param PizzaRepository $pizzaRepository
+     * @return Response
+     */
+    public function pizzaTomate(PizzaRepository $pizzaRepository){
+        $tomates= $pizzaRepository->findBy(["basepizza"=>1], ["price"=>'ASC']);
+
+        return $this->render('admin/pizza/tomate_index.html.twig',[
+            'tomates'=> $tomates
+        ]);
+    }
+
+    /**
+     * @Route ("/creme/index", name="admin_creme_index")
+     * @param PizzaRepository $pizzaRepository
+     * @return Response
+     */
+    public function pizzaCreme(PizzaRepository $pizzaRepository){
+        $cremes= $pizzaRepository->findBy(["basepizza"=>2], ["price"=>'ASC']);
+
+        return $this->render('admin/pizza/créme_index.html.twig',[
+            'cremes'=> $cremes
+        ]);
+    }
+
+    /**
+     * @Route ("/special/index", name="admin_special_index")
+     * @param PizzaRepository $pizzaRepository
+     * @return Response
+     */
+    public function pizzaSpecial(PizzaRepository $pizzaRepository){
+        $special = $pizzaRepository->findBy(["basepizza"=>3], ["price"=>'ASC']);
+
+        return $this->render('admin/pizza/special_index.html.twig',[
+            'specials'=> $special
+        ]);
     }
 }

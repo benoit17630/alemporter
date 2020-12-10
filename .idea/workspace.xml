@@ -21,21 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="ajout de quelque fonction search">
       <change afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/pizza/créme_index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/pizza/special_index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/pizza/tomate_index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/BaseIngredientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/BaseIngredientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PizzaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Admin/PizzaType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Admin/PizzaType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Admin/CheeseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Admin/CheeseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Admin/FishRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Admin/FishRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Admin/LegumeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Admin/LegumeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Admin/MeatRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Admin/MeatRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Admin/OtherRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Admin/OtherRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/search.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/pizza/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/pizza/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +197,7 @@
       <workItem from="1607254767798" duration="1908000" />
       <workItem from="1607258427610" duration="18545000" />
       <workItem from="1607329567312" duration="655000" />
-      <workItem from="1607503721638" duration="30299000" />
+      <workItem from="1607503721638" duration="36053000" />
     </task>
     <task id="LOCAL-00001" summary="creation">
       <created>1606905635479</created>
@@ -312,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607520130993</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="modification des metode search pour que le like marche">
+      <created>1607596838265</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1607596838265</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,6 +340,7 @@
     <MESSAGE value="ajout de la categorie divers" />
     <MESSAGE value="modification des redirections" />
     <MESSAGE value="ajout de quelque fonction search" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout de quelque fonction search" />
+    <MESSAGE value="modification des metode search pour que le like marche" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification des metode search pour que le like marche" />
   </component>
 </project>
