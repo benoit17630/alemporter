@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8062f5f-079a-4c5d-8140-3131bcb57642" name="Default Changelist" comment="ajout de quelque fonction search">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base_ingredient/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_ingredient/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base_pizza/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_pizza/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/opening_time/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/opening_time/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +159,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin/pizza" />
@@ -193,7 +196,10 @@
       <workItem from="1607254767798" duration="1908000" />
       <workItem from="1607258427610" duration="18545000" />
       <workItem from="1607329567312" duration="655000" />
-      <workItem from="1607503721638" duration="48694000" />
+      <workItem from="1607503721638" duration="49244000" />
+      <workItem from="1607629291000" duration="664000" />
+      <workItem from="1607633826999" duration="604000" />
+      <workItem from="1607677098337" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="creation">
       <created>1606905635479</created>
@@ -314,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607604072799</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="modification des metode search pour que le like marche">
+      <created>1607628398909</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1607628398909</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
