@@ -21,7 +21,7 @@
                 <td>{{ cheese.name }}</td>
                 <td>
 
-                    <a href="{{ path('admin_cheese_edit', {'id': cheese.id}) }}" class="btn btn-secondary">edit</a>
+                    <a href="{{ path('admin_cheese_edit', {'id': cheese.id}) }}" class="btn btn-secondary">modifier</a>
 
                     <form method="post" action="{{ path('admin_cheese_delete', {'id': cheese.id}) }}"
                           onsubmit="return confirm('ete vous sure de vouloir suprimer  {{ cheese.name }}?');" style="display: inline-block">

@@ -17,7 +17,9 @@ class OpeningTimeType extends AbstractType
                 'label'=> "de ? a ? "
             ])
 
-            ->add('isActive')
+            ->add('isActive', null,[
+                "label"=> "active ?"
+            ])
         ;
     }
 
